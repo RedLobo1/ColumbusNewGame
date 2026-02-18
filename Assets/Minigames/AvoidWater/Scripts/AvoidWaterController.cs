@@ -20,6 +20,9 @@ namespace Julio.Minigames.AvoidWater
 
         private float _timeLeft;
         private bool _isGameActive;
+        
+        [Header("Logic Data")]
+        public float[] lanes = { -2f, 0f, 2f };
 
         private void Start()
         {

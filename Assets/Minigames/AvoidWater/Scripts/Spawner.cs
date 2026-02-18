@@ -11,7 +11,6 @@ namespace Julio.Minigames.AvoidWater
     { 
         [SerializeField] private GameObject obstaclePrefab;
         [SerializeField] private float baseSpawnRate = 0.5f;
-        [SerializeField] private float[] lanes = { -2f, 0f, 2f };
         
         private AvoidWaterController _controller;
 
@@ -49,7 +48,9 @@ namespace Julio.Minigames.AvoidWater
 
         void SpawnObstacle()
         {
-            float laneY = lanes[Random.Range(0, lanes.Length)];
+            if (_controller == null) return;
+            
+            float laneY = _controller.lanes[Random.Range(0, _controller.lanes.Length)];
             Vector3 spawnPos = new Vector3(transform.position.x, laneY, 0);
 
             Instantiate(obstaclePrefab, spawnPos, Quaternion.identity);
