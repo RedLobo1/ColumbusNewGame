@@ -38,7 +38,7 @@ namespace Julio.Core
             if (won)
             {
                 successfulGames++;
-                globalSpeedMultiplier += 0.1f;
+                // globalSpeedMultiplier += 0.1f;
             }
             else
             {
