@@ -2,21 +2,32 @@ using Julio.Core;
 using UnityEngine;
 
 namespace Julio.Minigames.AvoidWater
-{
+{ 
     /// <summary>
-    /// Handles vertical lane-based movement for the player in avoidance minigames.
+    /// Handles vertical lane-based movement and dynamic sorting order for the player.
     /// </summary>
     public class PlayerMovement : MonoBehaviour
     { 
         [SerializeField] private float[] lanes = { -2f, 0f, 2f };
         [SerializeField] private float lerpSpeed = 10f;
+        
+        [Header("Rendering")]
+        [SerializeField] private int baseSortingOrder = 1;
 
         private int _currentLane = 1;
         private AvoidWaterController _controller;
+        private SpriteRenderer _spriteRenderer;
 
         private void Awake()
         {
             _controller = Object.FindAnyObjectByType<AvoidWaterController>();
+            // Cache the renderer from the child object
+            _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        }
+        
+        private void Start()
+        {
+            UpdateSortingOrder();
         }
     
         private void Update()
@@ -34,12 +45,34 @@ namespace Julio.Minigames.AvoidWater
         {
             if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
             {
-                if (_currentLane < lanes.Length - 1) _currentLane++;
+                if (_currentLane < lanes.Length - 1)
+                {
+                    _currentLane++;
+                    UpdateSortingOrder();
+                }
             }
 
             if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
             {
-                if (_currentLane > 0) _currentLane--;
+                if (_currentLane > 0)
+                {
+                    _currentLane--;
+                    UpdateSortingOrder();
+                }
+            }
+        }
+        
+        /// <summary>
+        /// Updates the SpriteRenderer's sorting order based on the current lane.
+        /// </summary>
+        private void UpdateSortingOrder()
+        {
+            if (_spriteRenderer != null)
+            {
+                // Lane 0 (bottom) -> Order 3
+                // Lane 1 (middle) -> Order 2
+                // Lane 2 (top)    -> Order 1
+                _spriteRenderer.sortingOrder = baseSortingOrder + (lanes.Length - 1 - _currentLane);
             }
         }
 
