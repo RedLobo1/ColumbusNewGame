@@ -6,6 +6,11 @@ public class DanceMinigameController : MonoBehaviour
 {
     // ─── Inspector Variables ───────────────────────────────────────────────────
 
+    [Header("Confetti")]
+
+    public GameObject confetti1;
+    public GameObject confetti2;
+
     [Header("Dancers")]
     public SpriteRenderer dancer1SpriteRenderer;
     public SpriteRenderer dancer2SpriteRenderer;
@@ -173,6 +178,7 @@ public class DanceMinigameController : MonoBehaviour
             SetNeutral();
             yield return new WaitForSeconds(demoMoveInterval - poseDuration);
         }
+        //confetti1.SetActive(true);
     }
 
     // ─── Player Input ──────────────────────────────────────────────────────────
@@ -276,6 +282,7 @@ public class DanceMinigameController : MonoBehaviour
         SetSprites(dancer1Win, dancer2Win);
         if (playerSpriteRenderer) playerSpriteRenderer.sprite = playerWin;
         PlaySound(successSound);
+        confetti2.SetActive(true);
         Debug.Log("Dance Minigame: SUCCESS!");
         // Hook in your own success logic / event here
     }
@@ -292,4 +299,6 @@ public class DanceMinigameController : MonoBehaviour
         Debug.Log("Dance Minigame: FAILURE!");
         // Hook in your own failure logic / event here
     }
+
+
 }
