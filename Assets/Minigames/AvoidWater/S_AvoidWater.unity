@@ -508,12 +508,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1564665626}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1828043027}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1605061995
 GameObject:
@@ -615,13 +615,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1605061995}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -7.9, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 746120337}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1828043027}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1605061999
 MonoBehaviour:
@@ -637,6 +637,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lerpSpeed: 10
   baseSortingOrder: 1
+--- !u!1 &1828043026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1828043027}
+  m_Layer: 0
+  m_Name: MinigameContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1828043027
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828043026}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1605061998}
+  - {fileID: 1564665628}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2005726521
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,7 +681,7 @@ GameObject:
   - component: {fileID: 2005726523}
   - component: {fileID: 2005726522}
   m_Layer: 0
-  m_Name: AvoidWaterController
+  m_Name: MinigameController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -670,6 +703,7 @@ MonoBehaviour:
   instructionDuration: 1.5
   instructionImageDisplay: {fileID: 4114416983742237776}
   uiOverlayPanel: {fileID: 4114416983742237774}
+  minigameContainer: {fileID: 1828043026}
   instructionSprite: {fileID: 5666552350422210624, guid: 26d7f1758cd35044ea755f4281c4f6cd, type: 3}
   instructionAnimName: PLACEHOLDER_InstructionImage
   backgroundAnimName: PLACEHOLDER_InstructionBackground
@@ -823,9 +857,8 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1143821301}
-  - {fileID: 1605061998}
-  - {fileID: 1564665628}
   - {fileID: 2005726523}
+  - {fileID: 1828043027}
   - {fileID: 1000218000}
   - {fileID: 80753720}
   - {fileID: 4114416983742237773}

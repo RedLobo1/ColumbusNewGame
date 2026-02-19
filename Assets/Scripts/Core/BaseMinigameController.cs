@@ -20,6 +20,7 @@ namespace Julio.Core
         [SerializeField] private GameObject uiOverlayPanel;
 
         [Header("Base Content")]
+        [SerializeField] private GameObject minigameContainer;
         [SerializeField] private Sprite instructionSprite;
         [SerializeField] private string instructionAnimName = "InstructionShow";
         [SerializeField] private string backgroundAnimName = "BackgroundFade";
@@ -37,14 +38,19 @@ namespace Julio.Core
             _backgroundAnim = uiOverlayPanel?.GetComponent<Animation>();
             _instructionAnim = instructionImageDisplay?.GetComponent<Animation>();
             
-            SetupInitialUI();
+            SetupInitialState();
             StartCoroutine(MinigameRoutine());
         }
 
-        private void SetupInitialUI()
+        /// <summary>
+        /// Initializes UI and hides the minigame world until the instruction phase ends.
+        /// </summary>
+        private void SetupInitialState()
         {
             if (uiOverlayPanel != null) uiOverlayPanel.SetActive(true);
             if (instructionImageDisplay != null) instructionImageDisplay.sprite = instructionSprite;
+
+            if (minigameContainer != null) minigameContainer.SetActive(false);
         }
 
         /// <summary>
@@ -64,7 +70,10 @@ namespace Julio.Core
             
             yield return new WaitForSeconds(instructionDuration);
 
+            // Transition to active gamepley
             if (uiOverlayPanel != null) uiOverlayPanel.SetActive(false);
+            if (minigameContainer != null) minigameContainer.SetActive(true);
+            
             _isGameActive = true;
 
             while (_timeLeft > 0)
