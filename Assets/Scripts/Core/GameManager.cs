@@ -46,8 +46,11 @@ namespace Julio.Core
                 if (lives <= 0) Debug.Log("Game Over!");
             }
             
-            // Logic to load next scene or map node
-            // SceneManager.LoadScene("S_MapNode");
+            WorldMapController map = Object.FindAnyObjectByType<WorldMapController>();
+            if (map != null)
+            {
+                map.UnloadMinigame();
+            }
         }
     }
 }
