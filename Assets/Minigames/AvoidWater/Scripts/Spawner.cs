@@ -55,7 +55,7 @@ namespace Julio.Minigames.AvoidWater
             float laneY = _controller.lanes[Random.Range(0, _controller.lanes.Length)];
             Vector3 spawnPos = new Vector3(transform.position.x, laneY, 0);
 
-            Instantiate(obstaclePrefab, spawnPos, Quaternion.identity);
+            Instantiate(obstaclePrefab, spawnPos, Quaternion.identity, transform.parent);
         }
     }
 }
