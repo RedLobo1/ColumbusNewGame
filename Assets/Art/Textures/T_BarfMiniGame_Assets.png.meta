@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      T_BarfMiniGame_Assets_0: -8589131865760551147
+      T_BarfMiniGame_Assets_1: 1184694166824796882
+      T_BarfMiniGame_Assets_2: 476808829034219538
+      T_BarfMiniGame_Assets_3: -1924706477797791194
+      T_BarfMiniGame_Assets_4: 1731770220116323055
+      T_BarfMiniGame_Assets_5: 4375694003939826159
+      T_BarfMiniGame_Assets_6: -1006860302540356587
+      T_BarfMiniGame_Assets_7: 8433490136534758278
+      T_BarfMiniGame_Assets_8: 4709196576772167160
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      T_ChaseMiniGame_Background_0: 1428851501874024070
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -322,7 +322,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      T_ChaseMiniGame_Assets_0: 7413145255885595549
+      T_ChaseMiniGame_Assets_1: -9132809676468017507
+      T_ChaseMiniGame_Assets_2: 7625684109481794964
+      T_ChaseMiniGame_Assets_3: -7229101407509273244
+      T_ChaseMiniGame_Assets_4: 4311059689379702535
+      T_ChaseMiniGame_Assets_5: 5935218204433811116
+      T_ChaseMiniGame_Assets_6: 2549292231067662539
+      T_ChaseMiniGame_Assets_7: 1054462054839497270
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

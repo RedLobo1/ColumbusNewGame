@@ -1447,7 +1447,60 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      T_ShipMiniGame_Background_0: -536667761319796691
+      T_ShipMiniGame_Background_1: -2092439784163646952
+      T_ShipMiniGame_Background_10: 1636155324163119673
+      T_ShipMiniGame_Background_11: -2013801431626361555
+      T_ShipMiniGame_Background_12: 4014196698069207280
+      T_ShipMiniGame_Background_13: -2551039424847432311
+      T_ShipMiniGame_Background_14: -6000073431204751040
+      T_ShipMiniGame_Background_15: -4466918597464844632
+      T_ShipMiniGame_Background_16: -4920456224393488475
+      T_ShipMiniGame_Background_17: 7247893260494587124
+      T_ShipMiniGame_Background_18: -5570620248895404442
+      T_ShipMiniGame_Background_19: 7199134040656457348
+      T_ShipMiniGame_Background_2: 4277713995957488040
+      T_ShipMiniGame_Background_20: 3698237688812068427
+      T_ShipMiniGame_Background_21: -8014111995245658982
+      T_ShipMiniGame_Background_22: -2681375996049848764
+      T_ShipMiniGame_Background_23: 8964632538170317256
+      T_ShipMiniGame_Background_24: 1450454608248461069
+      T_ShipMiniGame_Background_25: -6987796637801913267
+      T_ShipMiniGame_Background_26: 6723687404446935348
+      T_ShipMiniGame_Background_27: 2757656089569595726
+      T_ShipMiniGame_Background_28: 5211818705685703238
+      T_ShipMiniGame_Background_29: 2916832540326798421
+      T_ShipMiniGame_Background_3: 3490179168862834805
+      T_ShipMiniGame_Background_30: -6083794953933807731
+      T_ShipMiniGame_Background_31: 334880440915328477
+      T_ShipMiniGame_Background_32: -5163538618305607404
+      T_ShipMiniGame_Background_33: -6757688044096997958
+      T_ShipMiniGame_Background_34: -4909610709206055599
+      T_ShipMiniGame_Background_35: 8256426819096037748
+      T_ShipMiniGame_Background_36: -8936728153841118581
+      T_ShipMiniGame_Background_37: 4588432963044932110
+      T_ShipMiniGame_Background_38: 5723267660331974920
+      T_ShipMiniGame_Background_39: -3588064225698416985
+      T_ShipMiniGame_Background_4: 4952242686190460954
+      T_ShipMiniGame_Background_40: 6034536437600694702
+      T_ShipMiniGame_Background_41: -8359968389266177122
+      T_ShipMiniGame_Background_42: -4852393482035088509
+      T_ShipMiniGame_Background_43: 5994219077792579484
+      T_ShipMiniGame_Background_44: 5130942413047077471
+      T_ShipMiniGame_Background_45: -8909717321876109125
+      T_ShipMiniGame_Background_46: 711897850225186038
+      T_ShipMiniGame_Background_47: 8271011525991711924
+      T_ShipMiniGame_Background_48: 1814059767712784278
+      T_ShipMiniGame_Background_49: 9097609418898186464
+      T_ShipMiniGame_Background_5: 4906726300511618662
+      T_ShipMiniGame_Background_50: -8600532441713546374
+      T_ShipMiniGame_Background_51: -3784051038743118480
+      T_ShipMiniGame_Background_52: -1845469331906367959
+      T_ShipMiniGame_Background_6: -8750646873047851128
+      T_ShipMiniGame_Background_7: -5470881667950194901
+      T_ShipMiniGame_Background_8: 5000613300009517284
+      T_ShipMiniGame_Background_9: 2432923974072750883
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

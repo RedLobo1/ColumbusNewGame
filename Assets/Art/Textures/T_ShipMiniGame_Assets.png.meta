@@ -272,7 +272,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      T_ShipMiniGame_Assets_0: -9158917282036853373
+      T_ShipMiniGame_Assets_1: 8346580937129481579
+      T_ShipMiniGame_Assets_2: -1197870655116264754
+      T_ShipMiniGame_Assets_3: -4271224974481474964
+      T_ShipMiniGame_Assets_4: 7449468132449895193
+      T_ShipMiniGame_Assets_5: -5532842596244340513
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
