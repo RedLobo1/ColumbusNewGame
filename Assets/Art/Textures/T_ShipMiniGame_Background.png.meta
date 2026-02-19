@@ -1,0 +1,1455 @@
+fileFormatVersion: 2
+guid: b69a402cd6af1544f9b6cd34cd4d1832
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -536667761319796691
+    second: T_ShipMiniGame_Background_0
+  - first:
+      213: -2092439784163646952
+    second: T_ShipMiniGame_Background_1
+  - first:
+      213: 4277713995957488040
+    second: T_ShipMiniGame_Background_2
+  - first:
+      213: 3490179168862834805
+    second: T_ShipMiniGame_Background_3
+  - first:
+      213: 4952242686190460954
+    second: T_ShipMiniGame_Background_4
+  - first:
+      213: 4906726300511618662
+    second: T_ShipMiniGame_Background_5
+  - first:
+      213: -8750646873047851128
+    second: T_ShipMiniGame_Background_6
+  - first:
+      213: -5470881667950194901
+    second: T_ShipMiniGame_Background_7
+  - first:
+      213: 5000613300009517284
+    second: T_ShipMiniGame_Background_8
+  - first:
+      213: 2432923974072750883
+    second: T_ShipMiniGame_Background_9
+  - first:
+      213: 1636155324163119673
+    second: T_ShipMiniGame_Background_10
+  - first:
+      213: -2013801431626361555
+    second: T_ShipMiniGame_Background_11
+  - first:
+      213: 4014196698069207280
+    second: T_ShipMiniGame_Background_12
+  - first:
+      213: -2551039424847432311
+    second: T_ShipMiniGame_Background_13
+  - first:
+      213: -6000073431204751040
+    second: T_ShipMiniGame_Background_14
+  - first:
+      213: -4466918597464844632
+    second: T_ShipMiniGame_Background_15
+  - first:
+      213: -4920456224393488475
+    second: T_ShipMiniGame_Background_16
+  - first:
+      213: 7247893260494587124
+    second: T_ShipMiniGame_Background_17
+  - first:
+      213: -5570620248895404442
+    second: T_ShipMiniGame_Background_18
+  - first:
+      213: 7199134040656457348
+    second: T_ShipMiniGame_Background_19
+  - first:
+      213: 3698237688812068427
+    second: T_ShipMiniGame_Background_20
+  - first:
+      213: -8014111995245658982
+    second: T_ShipMiniGame_Background_21
+  - first:
+      213: -2681375996049848764
+    second: T_ShipMiniGame_Background_22
+  - first:
+      213: 8964632538170317256
+    second: T_ShipMiniGame_Background_23
+  - first:
+      213: 1450454608248461069
+    second: T_ShipMiniGame_Background_24
+  - first:
+      213: -6987796637801913267
+    second: T_ShipMiniGame_Background_25
+  - first:
+      213: 6723687404446935348
+    second: T_ShipMiniGame_Background_26
+  - first:
+      213: 2757656089569595726
+    second: T_ShipMiniGame_Background_27
+  - first:
+      213: 5211818705685703238
+    second: T_ShipMiniGame_Background_28
+  - first:
+      213: 2916832540326798421
+    second: T_ShipMiniGame_Background_29
+  - first:
+      213: -6083794953933807731
+    second: T_ShipMiniGame_Background_30
+  - first:
+      213: 334880440915328477
+    second: T_ShipMiniGame_Background_31
+  - first:
+      213: -5163538618305607404
+    second: T_ShipMiniGame_Background_32
+  - first:
+      213: -6757688044096997958
+    second: T_ShipMiniGame_Background_33
+  - first:
+      213: -4909610709206055599
+    second: T_ShipMiniGame_Background_34
+  - first:
+      213: 8256426819096037748
+    second: T_ShipMiniGame_Background_35
+  - first:
+      213: -8936728153841118581
+    second: T_ShipMiniGame_Background_36
+  - first:
+      213: 4588432963044932110
+    second: T_ShipMiniGame_Background_37
+  - first:
+      213: 5723267660331974920
+    second: T_ShipMiniGame_Background_38
+  - first:
+      213: -3588064225698416985
+    second: T_ShipMiniGame_Background_39
+  - first:
+      213: 6034536437600694702
+    second: T_ShipMiniGame_Background_40
+  - first:
+      213: -8359968389266177122
+    second: T_ShipMiniGame_Background_41
+  - first:
+      213: -4852393482035088509
+    second: T_ShipMiniGame_Background_42
+  - first:
+      213: 5994219077792579484
+    second: T_ShipMiniGame_Background_43
+  - first:
+      213: 5130942413047077471
+    second: T_ShipMiniGame_Background_44
+  - first:
+      213: -8909717321876109125
+    second: T_ShipMiniGame_Background_45
+  - first:
+      213: 711897850225186038
+    second: T_ShipMiniGame_Background_46
+  - first:
+      213: 8271011525991711924
+    second: T_ShipMiniGame_Background_47
+  - first:
+      213: 1814059767712784278
+    second: T_ShipMiniGame_Background_48
+  - first:
+      213: 9097609418898186464
+    second: T_ShipMiniGame_Background_49
+  - first:
+      213: -8600532441713546374
+    second: T_ShipMiniGame_Background_50
+  - first:
+      213: -3784051038743118480
+    second: T_ShipMiniGame_Background_51
+  - first:
+      213: -1845469331906367959
+    second: T_ShipMiniGame_Background_52
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_0
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 3056
+        width: 189
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d202124b38f5d88f0800000000000000
+      internalID: -536667761319796691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_1
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 3075
+        width: 310
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 812e70f3a1926f2e0800000000000000
+      internalID: -2092439784163646952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_2
+      rect:
+        serializedVersion: 2
+        x: 2038
+        y: 3079
+        width: 97
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a943cb073e7d5b30800000000000000
+      internalID: 4277713995957488040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_3
+      rect:
+        serializedVersion: 2
+        x: 3175
+        y: 3064
+        width: 153
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 570998a567b9f6030800000000000000
+      internalID: 3490179168862834805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_4
+      rect:
+        serializedVersion: 2
+        x: 3252
+        y: 3063
+        width: 139
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a10a8e72c76e9b440800000000000000
+      internalID: 4952242686190460954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_5
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 3005
+        width: 114
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 666cf08c291381440800000000000000
+      internalID: 4906726300511618662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_6
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 3012
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88f991928057f8680800000000000000
+      internalID: -8750646873047851128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_7
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 3001
+        width: 331
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2fc1a5eb168314b0800000000000000
+      internalID: -5470881667950194901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_8
+      rect:
+        serializedVersion: 2
+        x: 2677
+        y: 2981
+        width: 208
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e0492e4d4fb56540800000000000000
+      internalID: 5000613300009517284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_9
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 2980
+        width: 160
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3235328d67b73c120800000000000000
+      internalID: 2432923974072750883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_10
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 2955
+        width: 268
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93a5b1e399ac4b610800000000000000
+      internalID: 1636155324163119673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_11
+      rect:
+        serializedVersion: 2
+        x: 3476
+        y: 2890
+        width: 193
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d25dcbb744a8d04e0800000000000000
+      internalID: -2013801431626361555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_12
+      rect:
+        serializedVersion: 2
+        x: 3669
+        y: 2875
+        width: 220
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f806f6f0aa45b730800000000000000
+      internalID: 4014196698069207280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_13
+      rect:
+        serializedVersion: 2
+        x: 3802
+        y: 2873
+        width: 43
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 985b3f9b823e89cd0800000000000000
+      internalID: -2551039424847432311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_14
+      rect:
+        serializedVersion: 2
+        x: 1205
+        y: 2838
+        width: 237
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04918ca01057bbca0800000000000000
+      internalID: -6000073431204751040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_15
+      rect:
+        serializedVersion: 2
+        x: 2125
+        y: 2818
+        width: 405
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a6958dc3315202c0800000000000000
+      internalID: -4466918597464844632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_16
+      rect:
+        serializedVersion: 2
+        x: 2836
+        y: 2828
+        width: 180
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a79a24322707bbb0800000000000000
+      internalID: -4920456224393488475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_17
+      rect:
+        serializedVersion: 2
+        x: 2994
+        y: 2823
+        width: 161
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f44ab9f480b59460800000000000000
+      internalID: 7247893260494587124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_18
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 2793
+        width: 172
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 666cdf5e56e21b2b0800000000000000
+      internalID: -5570620248895404442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_19
+      rect:
+        serializedVersion: 2
+        x: 2421
+        y: 2810
+        width: 172
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48e20cf644678e360800000000000000
+      internalID: 7199134040656457348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_20
+      rect:
+        serializedVersion: 2
+        x: 1715
+        y: 2707
+        width: 317
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4eda987597c25330800000000000000
+      internalID: 3698237688812068427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_21
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 2698
+        width: 63
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9c7f25d99728c090800000000000000
+      internalID: -8014111995245658982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_22
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 2625
+        width: 304
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4468036fcb6d9cad0800000000000000
+      internalID: -2681375996049848764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_23
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 2599
+        width: 173
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c9dc8bfbc5c86c70800000000000000
+      internalID: 8964632538170317256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_24
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 2561
+        width: 156
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d075a7708cc012410800000000000000
+      internalID: 1450454608248461069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_25
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 2538
+        width: 163
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d44e5291bfb560f90800000000000000
+      internalID: -6987796637801913267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_26
+      rect:
+        serializedVersion: 2
+        x: 2905
+        y: 2508
+        width: 352
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 439e3da12165f4d50800000000000000
+      internalID: 6723687404446935348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_27
+      rect:
+        serializedVersion: 2
+        x: 3741
+        y: 2502
+        width: 226
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e411d7f4a99254620800000000000000
+      internalID: 2757656089569595726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_28
+      rect:
+        serializedVersion: 2
+        x: 2869
+        y: 2514
+        width: 32
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64ae12adf79145840800000000000000
+      internalID: 5211818705685703238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_29
+      rect:
+        serializedVersion: 2
+        x: 3225
+        y: 2516
+        width: 84
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 554aa7bcdbbaa7820800000000000000
+      internalID: 2916832540326798421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_30
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 2475
+        width: 282
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8f167409b4029ba0800000000000000
+      internalID: -6083794953933807731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_31
+      rect:
+        serializedVersion: 2
+        x: 2255
+        y: 2477
+        width: 222
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dddfbfa9cfbb5a400800000000000000
+      internalID: 334880440915328477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_32
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 2459
+        width: 144
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41902e7fbfc6758b0800000000000000
+      internalID: -5163538618305607404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_33
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 2448
+        width: 428
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab5b1b4178ed732a0800000000000000
+      internalID: -6757688044096997958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_34
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 2378
+        width: 85
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 155c15c721f8ddbb0800000000000000
+      internalID: -4909610709206055599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_35
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 2383
+        width: 119
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4794a329278b49270800000000000000
+      internalID: 8256426819096037748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_36
+      rect:
+        serializedVersion: 2
+        x: 3388
+        y: 2324
+        width: 281
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b825118c71d5af380800000000000000
+      internalID: -8936728153841118581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_37
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 2337
+        width: 164
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0a7cf528736daf30800000000000000
+      internalID: 4588432963044932110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_38
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 2362
+        width: 142
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80181982d912d6f40800000000000000
+      internalID: 5723267660331974920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_39
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 2340
+        width: 353
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a675fbd892a43ec0800000000000000
+      internalID: -3588064225698416985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1079
+        width: 4000
+        height: 1082
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea1375beaeafeb350800000000000000
+      internalID: 6034536437600694702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_41
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 914
+        width: 90
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e938b400b0d6bfb80800000000000000
+      internalID: -8359968389266177122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_42
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 727
+        width: 571
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 383b0e056d5d8acb0800000000000000
+      internalID: -4852393482035088509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_43
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 594
+        width: 576
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9f32b51e7ebf2350800000000000000
+      internalID: 5994219077792579484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_44
+      rect:
+        serializedVersion: 2
+        x: 2673
+        y: 675
+        width: 82
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5a18a490f4c43740800000000000000
+      internalID: 5130942413047077471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_45
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 322
+        width: 509
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb80e6c2d435a5480800000000000000
+      internalID: -8909717321876109125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_46
+      rect:
+        serializedVersion: 2
+        x: 3311
+        y: 486
+        width: 86
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f4590fa25b21e900800000000000000
+      internalID: 711897850225186038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_47
+      rect:
+        serializedVersion: 2
+        x: 3345
+        y: 419
+        width: 517
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b4c5e3492988c270800000000000000
+      internalID: 8271011525991711924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_48
+      rect:
+        serializedVersion: 2
+        x: 1758
+        y: 445
+        width: 73
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69f19d75fb5dc2910800000000000000
+      internalID: 1814059767712784278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_49
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 57
+        width: 576
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e0aca6b093314e70800000000000000
+      internalID: 9097609418898186464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_50
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 138
+        width: 82
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7be074df45c4a880800000000000000
+      internalID: -8600532441713546374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_51
+      rect:
+        serializedVersion: 2
+        x: 2401
+        y: 148
+        width: 85
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07db4c701a95c7bc0800000000000000
+      internalID: -3784051038743118480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_52
+      rect:
+        serializedVersion: 2
+        x: 2437
+        y: 21
+        width: 588
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92ee7db9b639366e0800000000000000
+      internalID: -1845469331906367959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
