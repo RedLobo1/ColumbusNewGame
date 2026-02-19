@@ -16,6 +16,7 @@ namespace Julio.Core
         [SerializeField] protected float instructionDuration = 1.5f;
 
         [Header("Base UI References")]
+        [SerializeField] private Slider timeProgressBar;
         [SerializeField] private Image instructionImageDisplay;
         [SerializeField] private GameObject uiOverlayPanel;
 
@@ -49,8 +50,12 @@ namespace Julio.Core
         {
             if (uiOverlayPanel != null) uiOverlayPanel.SetActive(true);
             if (instructionImageDisplay != null) instructionImageDisplay.sprite = instructionSprite;
-
             if (minigameContainer != null) minigameContainer.SetActive(false);
+            if (timeProgressBar != null)
+            {
+                timeProgressBar.gameObject.SetActive(false);
+                timeProgressBar.value = 1.0f;
+            }
         }
 
         /// <summary>
@@ -73,6 +78,7 @@ namespace Julio.Core
             // Transition to active gamepley
             if (uiOverlayPanel != null) uiOverlayPanel.SetActive(false);
             if (minigameContainer != null) minigameContainer.SetActive(true);
+            if (timeProgressBar != null) timeProgressBar.gameObject.SetActive(true);
             
             _isGameActive = true;
 
@@ -81,10 +87,22 @@ namespace Julio.Core
                 if (!_isGameActive) yield break;
 
                 _timeLeft -= Time.deltaTime;
+                UpdateProgressUI();
                 yield return null;
             }
 
             EndMinigame(true);
+        }
+
+        /// <summary>
+        /// Update visual time progress indicator.
+        /// </summary>
+        private void UpdateProgressUI()
+        {
+            if (timeProgressBar != null)
+            {
+                timeProgressBar.value = _timeLeft / gameDuration;
+            }
         }
 
         /// <summary>
