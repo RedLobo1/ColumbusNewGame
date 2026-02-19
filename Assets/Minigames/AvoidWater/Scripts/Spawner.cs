@@ -21,8 +21,12 @@ namespace Julio.Minigames.AvoidWater
 
         private void OnEnable()
         {
-            float screenRightEdge = Camera.main.ViewportToWorldPoint(new Vector3(1.1f, 0.5f, 0)).x;
-            transform.position = new Vector3(screenRightEdge, transform.position.y, 0);   
+
+            if (_controller != null && _controller.MinigameCamera != null)
+            {
+                float screenRightEdge = _controller.MinigameCamera.ViewportToWorldPoint(new Vector3(1.1f, 0.5f, 0)).x;
+                transform.position = new Vector3(screenRightEdge, transform.position.y, 0);   
+            }
         
             // Restart the routine whenever the minigame starts
             StopAllCoroutines();

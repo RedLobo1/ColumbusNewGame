@@ -46,9 +46,12 @@ namespace Julio.Core
         [SerializeField] private string instructionAnimName = "InstructionShow";
         [SerializeField] private string backgroundAnimName = "BackgroundFade";
         [SerializeField] private string resultAnimName = "ResultShow";
+        
+        public Camera MinigameCamera;
 
         protected float _timeLeft;
         protected bool _isGameActive;
+        
         private AudioSource _audioSource;
         private Animation _instructionAnim;
         private Animation _backgroundAnim;
@@ -59,6 +62,14 @@ namespace Julio.Core
             _audioSource = GetComponent<AudioSource>();
             _audioSource.playOnAwake = false;
             _audioSource.loop = true;
+            
+            // Direct scene-based camera search
+            MinigameCamera = FindLocalCamera();
+            
+            if (MinigameCamera == null)
+            {
+                Debug.LogWarning($"No camera found in the minigame scene: {gameObject.scene.name}");
+            }
         }
 
         protected virtual void Start()
@@ -71,6 +82,23 @@ namespace Julio.Core
             
             SetupInitialState();
             StartCoroutine(MinigameRoutine());
+        }
+        
+        /// <summary>
+        /// Finds the camera within the same scene as this object.
+        /// </summary>
+        private Camera FindLocalCamera()
+        {
+            Camera[] cams = Object.FindObjectsByType<Camera>(FindObjectsSortMode.None);
+            foreach (Camera cam in cams)
+            {
+                // Check if the camera is in the same scene as the Spawner
+                if (cam.gameObject.scene == gameObject.scene)
+                {
+                    return cam;
+                }
+            }
+            return null;
         }
 
         /// <summary>
