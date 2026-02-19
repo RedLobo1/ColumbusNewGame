@@ -13,16 +13,22 @@ public class TappingController : MonoBehaviour
 
     [SerializeField]GameObject runningObjects;
     [SerializeField]GameObject deadSprite;
-    
+    [SerializeField] Animator handleAnim;
     private void Start()
     {
         slider.minValue = 0f;
         slider.maxValue = 100f;
-        slider.value = 50f;
+        slider.value = 60f;
     }
 
     private void Update()
     {
+        if (!hasStarted)
+        {
+            slider.value -= 8f * Time.deltaTime;
+        }
+        
+
         if (!hasStarted) return;
         if (!shouldDecay) return;
         slider.value -= decayRate * Time.deltaTime;
@@ -52,6 +58,7 @@ public class TappingController : MonoBehaviour
     public void StopDecay()
     {
         shouldDecay = false ;
+        handleAnim.Play("RunAwayAnim");
     }
 
     public void StartGame()
