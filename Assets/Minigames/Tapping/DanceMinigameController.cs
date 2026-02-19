@@ -93,9 +93,9 @@ public class DanceMinigameController : MonoBehaviour
     {
         if (!waitingForInput || !gameActive) return;
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
             HandlePlayerInput(0);
-        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        else if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
             HandlePlayerInput(1);
     }
 

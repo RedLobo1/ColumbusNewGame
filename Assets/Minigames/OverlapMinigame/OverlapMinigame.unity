@@ -320,9 +320,9 @@ MonoBehaviour:
   playerMinX: -5
   playerMaxX: 5
   playerSpriteRenderer: {fileID: 297178507}
-  idleSprite: {fileID: 512735852, guid: 327fef3b54a5aae4ab04ff93a8f711ce, type: 3}
+  idleSprite: {fileID: -893325850, guid: 327fef3b54a5aae4ab04ff93a8f711ce, type: 3}
   almostDoneSprite: {fileID: -9309064, guid: 327fef3b54a5aae4ab04ff93a8f711ce, type: 3}
-  finishedSprite: {fileID: -893325850, guid: 327fef3b54a5aae4ab04ff93a8f711ce, type: 3}
+  finishedSprite: {fileID: 512735852, guid: 327fef3b54a5aae4ab04ff93a8f711ce, type: 3}
   almostDoneThreshold: 0.33
   countdownDuration: 5
 --- !u!4 &1096120630
