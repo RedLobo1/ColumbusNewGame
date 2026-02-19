@@ -160,6 +160,7 @@ namespace Julio.Core
             
             if (_audioSource != null) _audioSource.Stop();
             if (timeProgressBar != null) timeProgressBar.gameObject.SetActive(false);
+            if (minigameContainer != null) minigameContainer.SetActive(false);
             
             bool shouldShowResult = (wasSuccessful && useWinResultState) || (!wasSuccessful && useLoseResultState);
 
