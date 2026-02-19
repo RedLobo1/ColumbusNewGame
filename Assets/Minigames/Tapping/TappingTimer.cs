@@ -6,13 +6,14 @@ public class TappingTimer : MonoBehaviour
     [SerializeField] private float duration = 5f;
     [SerializeField] private GameObject countdownTextObject;
     [SerializeField] private float countdownDuration = 3f;
-
     public UnityEvent onMinigameEnd;
     public UnityEvent onMinigameStart;
 
     private float timeRemaining;
     private bool isRunning = false;
     private float countdownTimer;
+
+
 
     private void Start()
     {
