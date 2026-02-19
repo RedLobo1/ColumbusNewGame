@@ -670,7 +670,7 @@ MonoBehaviour:
   instructionDuration: 1.5
   instructionImageDisplay: {fileID: 4114416983742237776}
   uiOverlayPanel: {fileID: 4114416983742237774}
-  instructionSprite: {fileID: 0}
+  instructionSprite: {fileID: 5666552350422210624, guid: 26d7f1758cd35044ea755f4281c4f6cd, type: 3}
   instructionAnimName: PLACEHOLDER_InstructionImage
   backgroundAnimName: PLACEHOLDER_InstructionBackground
   lanes:
@@ -700,6 +700,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 54411234614829243, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 5666552350422210624, guid: 26d7f1758cd35044ea755f4281c4f6cd, type: 3}
+    - target: {fileID: 1281878549422010709, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
+      propertyPath: m_Animations.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1281878549422010709, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
+      propertyPath: 'm_Animations.Array.data[0]'
+      value: 
+      objectReference: {fileID: 7400000, guid: fcf6b1bc40dd577478d0ea06b0119a3b, type: 2}
     - target: {fileID: 2369116509957997212, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -780,57 +792,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2481058423351768287, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
-      propertyPath: m_Animation
-      value: 
-      objectReference: {fileID: 7400000, guid: e58c13065839eff49913bb1c241ae531, type: 2}
-    - target: {fileID: 2481058423351768287, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
-      propertyPath: m_PlayAutomatically
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2481058423351768287, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
-      propertyPath: m_Animations.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2481058423351768287, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
-      propertyPath: 'm_Animations.Array.data[0]'
-      value: 
-      objectReference: {fileID: 7400000, guid: e58c13065839eff49913bb1c241ae531, type: 2}
-    - target: {fileID: 2481058423351768287, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
-      propertyPath: 'm_Animations.Array.data[1]'
-      value: 
-      objectReference: {fileID: 7400000, guid: e58c13065839eff49913bb1c241ae531, type: 2}
-    - target: {fileID: 2481058423351768287, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
-      propertyPath: 'm_Animations.Array.data[2]'
-      value: 
-      objectReference: {fileID: 7400000, guid: e58c13065839eff49913bb1c241ae531, type: 2}
-    - target: {fileID: 2481058423351768287, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
-      propertyPath: 'm_Animations.Array.data[3]'
-      value: 
-      objectReference: {fileID: 7400000, guid: e58c13065839eff49913bb1c241ae531, type: 2}
     - target: {fileID: 7797553306704400954, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
       propertyPath: m_Name
-      value: PF_MinigameUI
+      value: PF_InstructionUI
       objectReference: {fileID: 0}
-    - target: {fileID: 7872158507031987576, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
-      propertyPath: m_Animation
-      value: 
-      objectReference: {fileID: 7400000, guid: fcf6b1bc40dd577478d0ea06b0119a3b, type: 2}
-    - target: {fileID: 7872158507031987576, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
-      propertyPath: m_PlayAutomatically
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7872158507031987576, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
-      propertyPath: m_Animations.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7872158507031987576, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
-      propertyPath: 'm_Animations.Array.data[0]'
-      value: 
-      objectReference: {fileID: 7400000, guid: fcf6b1bc40dd577478d0ea06b0119a3b, type: 2}
-    m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 664508674139154475, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
+    m_RemovedComponents:
+    - {fileID: 914210747918305237, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
