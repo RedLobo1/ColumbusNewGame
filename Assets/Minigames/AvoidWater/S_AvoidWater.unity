@@ -486,7 +486,7 @@ GameObject:
   - component: {fileID: 1143821303}
   m_Layer: 0
   m_Name: Main Camera
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1020,6 +1020,8 @@ MonoBehaviour:
   instructionAnimName: PLACEHOLDER_InstructionImage
   backgroundAnimName: PLACEHOLDER_InstructionBackground
   resultAnimName: PLACEHOLDER
+  minigameTargetTexture: {fileID: 8400000, guid: 6bb9f765e3c10e04fbff8292e4d0d1bc, type: 2}
+  MinigameCamera: {fileID: 0}
   lanes:
   - -2
   - 0

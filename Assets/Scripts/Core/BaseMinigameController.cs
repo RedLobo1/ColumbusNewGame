@@ -47,6 +47,9 @@ namespace Julio.Core
         [SerializeField] private string backgroundAnimName = "BackgroundFade";
         [SerializeField] private string resultAnimName = "ResultShow";
         
+        [Header("Render Texture Settings")]
+        [SerializeField] private RenderTexture minigameTargetTexture;
+        
         public Camera MinigameCamera;
 
         protected float _timeLeft;
@@ -69,6 +72,10 @@ namespace Julio.Core
             if (MinigameCamera == null)
             {
                 Debug.LogWarning($"No camera found in the minigame scene: {gameObject.scene.name}");
+            }
+            else if (minigameTargetTexture != null)
+            {
+                MinigameCamera.targetTexture = minigameTargetTexture;
             }
         }
 
