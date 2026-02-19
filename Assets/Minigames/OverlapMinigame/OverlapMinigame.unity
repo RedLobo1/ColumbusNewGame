@@ -323,7 +323,7 @@ GameObject:
   - component: {fileID: 1096120630}
   - component: {fileID: 1096120629}
   m_Layer: 0
-  m_Name: OverlapController
+  m_Name: MinigameController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -365,11 +365,11 @@ Transform:
   m_GameObject: {fileID: 1096120628}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -66.38977, y: -46.177887, z: -0.03511003}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1842904328}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1162748730
 GameObject:
@@ -404,37 +404,6 @@ Transform:
   - {fileID: 1351163407}
   - {fileID: 1911240366}
   m_Father: {fileID: 1842904328}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1329298412
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1329298413}
-  m_Layer: 0
-  m_Name: MinigameController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1329298413
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1329298412}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1351163406
 GameObject:
@@ -527,7 +496,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1096120630}
   - {fileID: 1162748731}
   - {fileID: 297178508}
   m_Father: {fileID: 0}
@@ -882,6 +850,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 2140736935}
   - {fileID: 148735024}
-  - {fileID: 1329298413}
+  - {fileID: 1096120630}
   - {fileID: 1842904328}
   - {fileID: 1707286280}
