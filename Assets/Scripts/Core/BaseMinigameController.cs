@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace Julio.Core
@@ -15,13 +16,12 @@ namespace Julio.Core
         [SerializeField] protected float instructionDuration = 1.5f;
 
         [Header("Base UI References")]
-        [SerializeField] private TextMeshProUGUI timerTextMesh;
         [SerializeField] private Image instructionImageDisplay;
         [SerializeField] private GameObject uiOverlayPanel;
 
         [Header("Base Content")]
         [SerializeField] private Sprite instructionSprite;
-        [SerializeField] private string animationClipName = "InstructionShow";
+        [SerializeField] private string instructionAnimName = "InstructionShow";
         [SerializeField] private string backgroundAnimName = "BackgroundFade";
 
         protected float _timeLeft;
@@ -57,9 +57,9 @@ namespace Julio.Core
                 _backgroundAnim.Play(backgroundAnimName);
             }
             
-            if (_instructionAnim != null && _instructionAnim.GetClip(animationClipName) != null)
+            if (_instructionAnim != null && _instructionAnim.GetClip(instructionAnimName) != null)
             {
-                _instructionAnim.Play(animationClipName);
+                _instructionAnim.Play(instructionAnimName);
             }
             
             yield return new WaitForSeconds(instructionDuration);
@@ -72,17 +72,10 @@ namespace Julio.Core
                 if (!_isGameActive) yield break;
 
                 _timeLeft -= Time.deltaTime;
-                UpdateTimerUI();
                 yield return null;
             }
 
             EndMinigame(true);
-        }
-
-        private void UpdateTimerUI()
-        {
-            if (timerTextMesh != null)
-                timerTextMesh.text = Mathf.CeilToInt(_timeLeft).ToString();
         }
 
         /// <summary>
