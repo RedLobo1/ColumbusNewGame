@@ -24,7 +24,11 @@ namespace Julio.Minigames.AvoidWater
             _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         }
         
-        private void Start()
+        /// <summary>
+        /// Called when the player object is activated.
+        /// Ensures correct sorting order.
+        /// </summary>
+        private void OnEnable()
         {
             UpdateSortingOrder();
         }

@@ -19,11 +19,13 @@ namespace Julio.Minigames.AvoidWater
             _controller = Object.FindAnyObjectByType<AvoidWaterController>();
         }
 
-        void Start()
+        private void OnEnable()
         {
             float screenRightEdge = Camera.main.ViewportToWorldPoint(new Vector3(1.1f, 0.5f, 0)).x;
             transform.position = new Vector3(screenRightEdge, transform.position.y, 0);   
         
+            // Restart the routine whenever the minigame starts
+            StopAllCoroutines();
             StartCoroutine(SpawnRoutine());
         }
 
