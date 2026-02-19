@@ -22,15 +22,20 @@ namespace Julio.Core
         [Header("Base Content")]
         [SerializeField] private Sprite instructionSprite;
         [SerializeField] private string animationClipName = "InstructionShow";
+        [SerializeField] private string backgroundAnimName = "BackgroundFade";
 
         protected float _timeLeft;
         protected bool _isGameActive;
-        private Animation _uiAnimation;
+        
+        private Animation _instructionAnim;
+        private Animation _backgroundAnim;
 
         protected virtual void Start()
         {
             _timeLeft = gameDuration;
-            _uiAnimation = instructionImageDisplay?.GetComponent<Animation>();
+            
+            _backgroundAnim = uiOverlayPanel?.GetComponent<Animation>();
+            _instructionAnim = instructionImageDisplay?.GetComponent<Animation>();
             
             SetupInitialUI();
             StartCoroutine(MinigameRoutine());
@@ -47,9 +52,14 @@ namespace Julio.Core
         /// </summary>
         private IEnumerator MinigameRoutine()
         {
-            if (_uiAnimation != null && _uiAnimation.GetClip(animationClipName) != null)
+            if (_backgroundAnim != null && _backgroundAnim.GetClip(backgroundAnimName) != null)
             {
-                _uiAnimation.Play(animationClipName);
+                _backgroundAnim.Play(backgroundAnimName);
+            }
+            
+            if (_instructionAnim != null && _instructionAnim.GetClip(animationClipName) != null)
+            {
+                _instructionAnim.Play(animationClipName);
             }
             
             yield return new WaitForSeconds(instructionDuration);
