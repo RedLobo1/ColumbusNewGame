@@ -1,8 +1,12 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Art/Animations/PlaceHolder/DeadEffect.anim.meta
 guid: 2bcede1dbc7180f4bba475ad27f49abe
+========
+guid: 0031f1bcc044fca4e848f6e36e435e08
+>>>>>>>> origin/Dancing:Assets/Art/Animations/PlaceHolder/PLACEHOLDER_Tapping-EnemyRunning2.anim.meta
 NativeFormatImporter:
   externalObjects: {}
-  mainObjectFileID: 7400000
+  mainObjectFileID: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

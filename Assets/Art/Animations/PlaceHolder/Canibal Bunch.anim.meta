@@ -1,8 +1,12 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Art/Animations/PlaceHolder/Canibal Bunch.anim.meta
 guid: 091faff812adaf6479458ad328a68b1d
+========
+guid: b853f2e0c0b88ec4ea6fe41a8b37468b
+>>>>>>>> origin/Dancing:Assets/Art/Animations/PlaceHolder/PLACEHOLDER_Tapping-EnemyRunning1.anim.meta
 NativeFormatImporter:
   externalObjects: {}
-  mainObjectFileID: 7400000
+  mainObjectFileID: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
