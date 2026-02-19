@@ -9,11 +9,17 @@ namespace Julio.Core
     /// <summary>
     /// Base class for all minigames handling lifecycle and instruction UI.
     /// </summary>
+    [RequireComponent(typeof(AudioSource))]
     public abstract class BaseMinigameController : MonoBehaviour
     {
         [Header("Base Settings")]
         [SerializeField] protected float gameDuration = 5f;
         [SerializeField] protected float instructionDuration = 1.5f;
+
+        [Header("Audio Settings")]
+        [SerializeField] private AudioClip instructionMusic;
+        [SerializeField] private AudioClip gameplayMusic;
+        private AudioSource _audioSource;
 
         [Header("Base UI References")]
         [SerializeField] private Slider timeProgressBar;
@@ -31,6 +37,13 @@ namespace Julio.Core
         
         private Animation _instructionAnim;
         private Animation _backgroundAnim;
+
+        private void Awake()
+        {
+            _audioSource = GetComponent<AudioSource>();
+            _audioSource.playOnAwake = false;
+            _audioSource.loop = true;
+        }
 
         protected virtual void Start()
         {
@@ -63,6 +76,8 @@ namespace Julio.Core
         /// </summary>
         private IEnumerator MinigameRoutine()
         {
+            PlayOptionalMusic(instructionMusic);
+            
             if (_backgroundAnim != null && _backgroundAnim.GetClip(backgroundAnimName) != null)
             {
                 _backgroundAnim.Play(backgroundAnimName);
@@ -74,6 +89,9 @@ namespace Julio.Core
             }
             
             yield return new WaitForSeconds(instructionDuration);
+            
+            if (_audioSource != null) _audioSource.Stop();
+            PlayOptionalMusic(gameplayMusic);
 
             // Transition to active gamepley
             if (uiOverlayPanel != null) uiOverlayPanel.SetActive(false);
@@ -105,6 +123,15 @@ namespace Julio.Core
             }
         }
 
+        private void PlayOptionalMusic(AudioClip clip)
+        {
+            if (clip != null && _audioSource != null)
+            {
+                _audioSource.clip = clip;
+                _audioSource.Play();
+            }
+        }
+
         /// <summary>
         /// Reports the minigame result to the global GameManager.
         /// </summary>
@@ -112,6 +139,9 @@ namespace Julio.Core
         {
             if (!_isGameActive) return;
             _isGameActive = false;
+            
+            if (_audioSource != null) _audioSource.Stop();
+            if (timeProgressBar != null) timeProgressBar.gameObject.SetActive(false);
 
             if (GameManager.Instance != null)
             {
