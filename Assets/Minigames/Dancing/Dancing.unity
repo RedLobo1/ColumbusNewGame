@@ -713,8 +713,8 @@ GameObject:
   - component: {fileID: 1042621282}
   - component: {fileID: 1042621285}
   m_Layer: 0
-  m_Name: Main Camera
-  m_TagString: MainCamera
+  m_Name: Minigame Camera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -935,6 +935,7 @@ GameObject:
   - component: {fileID: 1135966988}
   - component: {fileID: 1135966987}
   - component: {fileID: 1135966986}
+  - component: {fileID: 1135966989}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1003,6 +1004,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1135966989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135966985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a5d96d2220817a4b93ada486601b922, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1214573024
 GameObject:
   m_ObjectHideFlags: 0
