@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/S_Map.unity
+    path: Assets/Scenes/Map.unity
     guid: 92305bb80f9420349b320ff31163f49a
   - enabled: 1
-    path: Assets/Minigames/AvoidWater/S_AvoidWater.unity
+    path: Assets/Minigames/AvoidWater/AvoidWater.unity
     guid: 1838d9dab4eb49f49aded91e2493a626
   - enabled: 1
     path: Assets/Minigames/Don'tPress/DontPress.unity
