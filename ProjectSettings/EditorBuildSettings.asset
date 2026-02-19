@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/S_Map.unity
+    path: Assets/Scenes/Map.unity
     guid: 92305bb80f9420349b320ff31163f49a
   - enabled: 1
-    path: Assets/Minigames/AvoidWater/S_AvoidWater.unity
+    path: Assets/Minigames/AvoidWater/AvoidWater.unity
     guid: 1838d9dab4eb49f49aded91e2493a626
   - enabled: 1
     path: Assets/Minigames/Don'tPress/DontPress.unity
@@ -17,6 +17,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Minigames/Tapping/Tapping.unity
     guid: 7f1112c4459fbdc4dbc9f6cc1bc5f198
+  - enabled: 1
+    path: Assets/Minigames/Dancing/Dancing.unity
+    guid: ed243db0aa9008f47a0f9cadc177f626
+  - enabled: 1
+    path: Assets/Minigames/StopAtRightTime/StopAtRightTime.unity
+    guid: 222b228c3d58ee842bceb4d2ebd1b6f9
+  - enabled: 1
+    path: Assets/Minigames/OverlapMinigame/OverlapMinigame.unity
+    guid: e9cac3262913e354d85045f1868c919b
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
