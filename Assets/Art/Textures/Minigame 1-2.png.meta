@@ -1,67 +1,106 @@
 fileFormatVersion: 2
-guid: a641d7e32aba52e469241cf8fa80d93c
+guid: 327fef3b54a5aae4ab04ff93a8f711ce
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4908747581852197582
-    second: CannibalSpritesheet_0
+      213: -837223380158423680
+    second: Minigame 1-2_0
   - first:
-      213: -1584989702680430881
-    second: CannibalSpritesheet_1
+      213: -137999477579218592
+    second: Minigame 1-2_1
   - first:
-      213: -8300425830764627647
-    second: CannibalSpritesheet_2
+      213: 7488521652290416423
+    second: Minigame 1-2_2
   - first:
-      213: -3949544926470635597
-    second: CannibalSpritesheet_3
+      213: 5304368058009828773
+    second: Minigame 1-2_3
   - first:
-      213: -6774189799326785806
-    second: CannibalSpritesheet_4
+      213: -8524528102457089389
+    second: Minigame 1-2_4
   - first:
-      213: 6031766208501953591
-    second: CannibalSpritesheet_5
+      213: 3395210637395638511
+    second: Minigame 1-2_5
   - first:
-      213: -1076274819715983583
-    second: CannibalSpritesheet_6
+      213: -8659329799211347027
+    second: Minigame 1-2_6
   - first:
-      213: -3634573961274810143
-    second: CannibalSpritesheet_7
+      213: 4970786576945166255
+    second: Minigame 1-2_7
   - first:
-      213: -3706772980454938800
-    second: CannibalSpritesheet_8
+      213: -4085760420272830795
+    second: Minigame 1-2_8
   - first:
-      213: -264386599462071859
-    second: CannibalSpritesheet_9
+      213: -3520783555570688208
+    second: Minigame 1-2_9
   - first:
-      213: 3869485911002532778
-    second: CannibalSpritesheet_10
+      213: -2039191812668931405
+    second: Minigame 1-2_10
   - first:
-      213: 4825417885838270036
-    second: CannibalSpritesheet_11
+      213: 8406141126103446312
+    second: Minigame 1-2_11
   - first:
-      213: 3602473546034076856
-    second: CannibalSpritesheet_12
+      213: -1929813004635569546
+    second: Minigame 1-2_12
   - first:
-      213: -4203524591023694310
-    second: CannibalSpritesheet_13
+      213: -8819576810350461677
+    second: Minigame 1-2_13
   - first:
-      213: 7276503410394376141
-    second: CannibalSpritesheet_14
+      213: -8941094521560824512
+    second: Minigame 1-2_14
   - first:
-      213: 803528347923232120
-    second: CannibalSpritesheet_15
+      213: 2405557333144608731
+    second: Minigame 1-2_15
   - first:
-      213: -2669117336288719453
-    second: CannibalSpritesheet_16
+      213: -8267286846476959024
+    second: Minigame 1-2_16
   - first:
-      213: -2542598559262056485
-    second: CannibalSpritesheet_17
+      213: -7624932634576358476
+    second: Minigame 1-2_17
   - first:
-      213: -1355207926663097118
-    second: CannibalSpritesheet_18
+      213: 5202341591151383668
+    second: Minigame 1-2_18
   - first:
-      213: -5445718616683494601
-    second: CannibalSpritesheet_19
+      213: -1530357127633496451
+    second: Minigame 1-2_19
+  - first:
+      213: 3003767330245067818
+    second: Minigame 1-2_20
+  - first:
+      213: 6124560963835205735
+    second: Minigame 1-2_21
+  - first:
+      213: -7755484100019269605
+    second: Minigame 1-2_22
+  - first:
+      213: -5713684435520910940
+    second: Minigame 1-2_23
+  - first:
+      213: 4252048986139244953
+    second: Minigame 1-2_24
+  - first:
+      213: 5846047368282933136
+    second: Minigame 1-2_25
+  - first:
+      213: 5034969520527180649
+    second: Minigame 1-2_26
+  - first:
+      213: 9083432668793909438
+    second: Minigame 1-2_27
+  - first:
+      213: -3593163762552532348
+    second: Minigame 1-2_28
+  - first:
+      213: 7705617565076972895
+    second: Minigame 1-2_29
+  - first:
+      213: 3959656143329917049
+    second: Minigame 1-2_30
+  - first:
+      213: -2546045446133157515
+    second: Minigame 1-2_31
+  - first:
+      213: 9167278431755360877
+    second: Minigame 1-2_32
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -129,7 +168,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -142,19 +181,6 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -183,13 +209,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CannibalSpritesheet_0
+      name: Minigame 1-2_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1669
-        width: 2151
-        height: 1033
+        x: 197
+        y: 1388
+        width: 743
+        height: 686
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,20 +224,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82579c6133d4c8d40a7a96f8f017724c
-      internalID: 460608220
+      spriteID: 8b7633264cb557d4a99c5282e93ec7cd
+      internalID: -585682848
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CannibalSpritesheet_1
+      name: Minigame 1-2_1
       rect:
         serializedVersion: 2
-        x: 192
-        y: 1937
-        width: 445
-        height: 700
+        x: 961
+        y: 1397
+        width: 521
+        height: 580
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -220,20 +246,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d8963a04805aae48aa327de7e77c6dc
-      internalID: 2097221570
+      spriteID: f803f2c2f2a9c4a48976dc6658329bb7
+      internalID: -86970991
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CannibalSpritesheet_2
+      name: Minigame 1-2_2
       rect:
         serializedVersion: 2
-        x: 773
-        y: 1939
-        width: 440
-        height: 574
+        x: 1527
+        y: 1672
+        width: 795
+        height: 421
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,20 +268,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c96917da003bc44cab845c369404f3b
-      internalID: -11010424
+      spriteID: 46359e3f306177247abb3b9e17999e35
+      internalID: 181196781
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CannibalSpritesheet_3
+      name: Minigame 1-2_3
       rect:
         serializedVersion: 2
-        x: 1329
-        y: 2167
-        width: 236
-        height: 179
+        x: 2429
+        y: 1563
+        width: 431
+        height: 473
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -264,20 +290,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b568f39b09592a74aae98b78bc79b346
-      internalID: -2035016674
+      spriteID: ba339b3fb86063045af231bf099f3b0c
+      internalID: -1688263379
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CannibalSpritesheet_4
+      name: Minigame 1-2_4
       rect:
         serializedVersion: 2
-        x: 1696
-        y: 1901
-        width: 3640
-        height: 801
+        x: 1738
+        y: 1371
+        width: 523
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -286,20 +312,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70bd3e13dbe735b4fa2766909c3ddf7d
-      internalID: -1730325308
+      spriteID: 53c02ed81007e2349bef225f8d31b94e
+      internalID: -1297932691
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CannibalSpritesheet_5
+      name: Minigame 1-2_5
       rect:
         serializedVersion: 2
-        x: 2185
-        y: 2055
-        width: 354
-        height: 312
+        x: 1823
+        y: 1168
+        width: 277
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -308,20 +334,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 862084ab541be9e4598da537ddfc0f1d
-      internalID: -415443375
+      spriteID: 6fb0a4f0217f2944a8c2696e2de49560
+      internalID: -1236635220
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CannibalSpritesheet_6
+      name: Minigame 1-2_6
       rect:
         serializedVersion: 2
-        x: 2665
-        y: 2070
-        width: 145
-        height: 141
+        x: 1011
+        y: 531
+        width: 774
+        height: 819
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -330,20 +356,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90a2afabc975ac34e8076492d0ceea0c
-      internalID: -242212078
+      spriteID: 7a1d467f023e5a74cb241198003bb8f8
+      internalID: 1461378119
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CannibalSpritesheet_7
+      name: Minigame 1-2_7
       rect:
         serializedVersion: 2
-        x: 100
-        y: 1381
-        width: 383
-        height: 546
+        x: 166
+        y: 734
+        width: 729
+        height: 613
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -352,20 +378,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9ec68cfb569bdb4c870dde2ab2a42d1
-      internalID: -167836690
+      spriteID: cc92be2b1bdc73444acf0afe15d766cc
+      internalID: -136921704
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CannibalSpritesheet_8
+      name: Minigame 1-2_8
       rect:
         serializedVersion: 2
-        x: 731
-        y: 1374
-        width: 284
-        height: 558
+        x: 1816
+        y: 540
+        width: 478
+        height: 533
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -374,20 +400,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98447ad5edcc89240ab65b6f1367a468
-      internalID: 738840050
+      spriteID: d5a0c26762b897f47881fa928e459aaf
+      internalID: 512735852
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CannibalSpritesheet_9
+      name: Minigame 1-2_9
       rect:
         serializedVersion: 2
-        x: 1156
-        y: 1462
-        width: 448
-        height: 405
+        x: 1591
+        y: 91
+        width: 478
+        height: 440
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -396,20 +422,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c88299f7a74a6aa4dad13368b7531ed3
-      internalID: -119779236
+      spriteID: 3b62e771af42c89479f86f77e70dad1b
+      internalID: -9309064
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CannibalSpritesheet_10
+      name: Minigame 1-2_10
       rect:
         serializedVersion: 2
-        x: 2195
-        y: 1260
-        width: 99
-        height: 687
+        x: 2076
+        y: 74
+        width: 483
+        height: 473
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -418,20 +444,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a03984d7907b01a4a86ff4c2839f635c
-      internalID: 131971321
+      spriteID: 8efcae87f24982149be55eb8c7e56387
+      internalID: -893325850
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CannibalSpritesheet_11
+      name: Minigame 1-2_11
       rect:
         serializedVersion: 2
-        x: 2341
-        y: 1242
-        width: 73
-        height: 727
+        x: 2280
+        y: 971
+        width: 1481
+        height: 476
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -440,20 +466,64 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd8c8a4d2a2b8ce44bc67adb10c067b4
-      internalID: -745047436
+      spriteID: 236eb9195d206d94f9e235510cefe3fe
+      internalID: 1125590172
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CannibalSpritesheet_12
+      name: Minigame 1-2_12
       rect:
         serializedVersion: 2
-        x: 2622
-        y: 1093
+        x: 2448
+        y: 663
+        width: 861
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b250ff914402d72469f3035a7d4070e3
+      internalID: 1233951474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minigame 1-2_13
+      rect:
+        serializedVersion: 2
+        x: 3302
+        y: 507
+        width: 500
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 277aba7f3bb9bb548b20da3de4d0255d
+      internalID: 555404471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minigame 1-2_14
+      rect:
+        serializedVersion: 2
+        x: 3305
+        y: 342
         width: 482
-        height: 500
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -462,20 +532,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38abc9721462dcc46b254adc7273dcdb
-      internalID: 1928526239
+      spriteID: 7555195577d377548985ba991133ee5c
+      internalID: 12055029
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CannibalSpritesheet_13
+      name: Minigame 1-2_15
       rect:
         serializedVersion: 2
-        x: 3138
-        y: 1054
-        width: 516
-        height: 586
+        x: 2635
+        y: 46
+        width: 705
+        height: 518
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -484,118 +554,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40deb09e2d283184891741c683a26824
-      internalID: 865023366
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CannibalSpritesheet_14
-      rect:
-        serializedVersion: 2
-        x: 134
-        y: 608
-        width: 679
-        height: 732
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 74b9eb8566508904b888d8071c6f7e69
-      internalID: 1256463083
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CannibalSpritesheet_15
-      rect:
-        serializedVersion: 2
-        x: 715
-        y: 596
-        width: 706
-        height: 718
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f210394c80bee7e4e83b023f0230e7c5
-      internalID: -1727427891
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CannibalSpritesheet_16
-      rect:
-        serializedVersion: 2
-        x: 1395
-        y: 590
-        width: 1015
-        height: 756
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5c164814709a17b4388d46c4e126e8e5
-      internalID: -1696124041
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CannibalSpritesheet_17
-      rect:
-        serializedVersion: 2
-        x: 2510
-        y: 538
-        width: 912
-        height: 310
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 86bb04abb727d3947ba19108e18786dd
-      internalID: 419792702
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CannibalSpritesheet_18
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 5336
-        height: 345
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5c74150f144c687498ea560ef37f34c6
-      internalID: -1979952374
+      spriteID: 33673ba145f68c9449887002ffe01c0f
+      internalID: 821807528
       vertices: []
       indices: 
       edges: []
@@ -604,7 +564,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2134394409ce27a48b97d1c2721157ac
+    spriteID: 40d1d2df768c4fe46add08a443162d53
     internalID: 0
     vertices: []
     indices: 
@@ -614,25 +574,22 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      CannibalSpritesheet_0: 460608220
-      CannibalSpritesheet_1: 2097221570
-      CannibalSpritesheet_10: 131971321
-      CannibalSpritesheet_11: -745047436
-      CannibalSpritesheet_12: 1928526239
-      CannibalSpritesheet_13: 865023366
-      CannibalSpritesheet_14: 1256463083
-      CannibalSpritesheet_15: -1727427891
-      CannibalSpritesheet_16: -1696124041
-      CannibalSpritesheet_17: 419792702
-      CannibalSpritesheet_18: -1979952374
-      CannibalSpritesheet_2: -11010424
-      CannibalSpritesheet_3: -2035016674
-      CannibalSpritesheet_4: -1730325308
-      CannibalSpritesheet_5: -415443375
-      CannibalSpritesheet_6: -242212078
-      CannibalSpritesheet_7: -167836690
-      CannibalSpritesheet_8: 738840050
-      CannibalSpritesheet_9: -119779236
+      Minigame 1-2_0: -585682848
+      Minigame 1-2_1: -86970991
+      Minigame 1-2_10: -893325850
+      Minigame 1-2_11: 1125590172
+      Minigame 1-2_12: 1233951474
+      Minigame 1-2_13: 555404471
+      Minigame 1-2_14: 12055029
+      Minigame 1-2_15: 821807528
+      Minigame 1-2_2: 181196781
+      Minigame 1-2_3: -1688263379
+      Minigame 1-2_4: -1297932691
+      Minigame 1-2_5: -1236635220
+      Minigame 1-2_6: 1461378119
+      Minigame 1-2_7: -136921704
+      Minigame 1-2_8: 512735852
+      Minigame 1-2_9: -9309064
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
