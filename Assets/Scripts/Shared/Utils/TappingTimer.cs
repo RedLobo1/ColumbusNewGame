@@ -15,8 +15,6 @@ namespace Julio.Utils
         private bool isRunning = false;
         private float countdownTimer;
 
-
-
         private void Start()
         {
             timeRemaining = duration;

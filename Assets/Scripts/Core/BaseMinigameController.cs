@@ -13,19 +13,24 @@ namespace Julio.Core
     public abstract class BaseMinigameController : MonoBehaviour
     {
         [Header("Base Settings")]
+        [SerializeField] private GameObject minigameContainer;
         [SerializeField] protected float gameDuration = 5f;
-        [SerializeField] protected float instructionDuration = 1.5f;
+        
+        [Header("Render Texture Settings")]
+        [SerializeField] private RenderTexture minigameTargetTexture;
         
         [Header("Instruction Settings")]
+        [SerializeField] protected float instructionDuration = 1.5f;
+        [SerializeField] private GameObject instructionCanvas;
+        [SerializeField] private TextMeshProUGUI instructionDisplayText; 
         [SerializeField] private string instructionText = "DO SOMETHING!";
         [SerializeField] private Color instructionColor = Color.white;
+        [SerializeField] private Slider timeProgressBar;
 
-        [Header("Result Logic")]
+        [Header("Result Settings")]
+        [SerializeField] private float resultDuration = 1.5f;
         [SerializeField] private bool useWinResultState = true;
         [SerializeField] private bool useLoseResultState = true;
-        [SerializeField] private float resultDuration = 1.5f;
-
-        [Header("Result UI References")]
         [SerializeField] private GameObject resultCanvas;
         [SerializeField] private Image resultImage;
         [SerializeField] private Sprite winSprite;
@@ -37,22 +42,10 @@ namespace Julio.Core
         [SerializeField] private AudioClip winAudio;
         [SerializeField] private AudioClip loseAudio;
 
-        [Header("Base UI References")]
-        [SerializeField] private Slider timeProgressBar;
-        [SerializeField] private GameObject instructionCanvas;
-        [SerializeField] private TextMeshProUGUI instructionDisplayText; 
-
-        [Header("Base Content References")]
-        [SerializeField] private GameObject minigameContainer;
-        [SerializeField] private Sprite instructionSprite;
-        
         [Header( "Animation Settings")]
         [SerializeField] private string instructionAnimName = "InstructionShow";
         [SerializeField] private string backgroundAnimName = "BackgroundFade";
         [SerializeField] private string resultAnimName = "ResultShow";
-        
-        [Header("Render Texture Settings")]
-        [SerializeField] private RenderTexture minigameTargetTexture;
         
         public Camera MinigameCamera;
 
