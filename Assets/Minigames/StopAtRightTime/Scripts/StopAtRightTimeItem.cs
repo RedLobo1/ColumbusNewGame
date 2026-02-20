@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class StopMinigameItem : MonoBehaviour
+public class StopAtRightTimeItem : MonoBehaviour
 {
     [SerializeField] private string destinationTag = "Destination";
 

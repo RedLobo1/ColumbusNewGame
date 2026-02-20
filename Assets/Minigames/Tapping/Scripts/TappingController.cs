@@ -1,68 +1,72 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TappingController : MonoBehaviour
+namespace Julio.Minigames.Tapping
 {
-    [SerializeField] private Slider slider;
-    [SerializeField] private float decayRate = 5f;
-    [SerializeField] private float tapIncrease = 10f;
-    bool shouldDecay = true;
-    bool hasStarted = false;
-
-    bool hasLost = false;
-
-    [SerializeField]GameObject runningObjects;
-    [SerializeField]GameObject deadSprite;
-    [SerializeField] Animator handleAnim;
-    private void Start()
+    public class TappingController : MonoBehaviour
     {
-        slider.minValue = 0f;
-        slider.maxValue = 100f;
-        slider.value = 60f;
-    }
+        [SerializeField] private Slider slider;
+        [SerializeField] private float decayRate = 5f;
+        [SerializeField] private float tapIncrease = 10f;
+        bool shouldDecay = true;
+        bool hasStarted = false;
 
-    private void Update()
-    {
-        if (!hasStarted)
+        bool hasLost = false;
+
+        [SerializeField] GameObject runningObjects;
+        [SerializeField] GameObject deadSprite;
+        [SerializeField] Animator handleAnim;
+
+        private void Start()
         {
-            slider.value -= 8f * Time.deltaTime;
-        }
-        
-
-        if (!hasStarted) return;
-        if (!shouldDecay) return;
-        slider.value -= decayRate * Time.deltaTime;
-
-        if (Input.anyKeyDown)
-        {
-            slider.value += tapIncrease;
+            slider.minValue = 0f;
+            slider.maxValue = 100f;
+            slider.value = 60f;
         }
 
-        if (slider.value <= 0f)
+        private void Update()
         {
-            FailGame();
+            if (!hasStarted)
+            {
+                slider.value -= 8f * Time.deltaTime;
+            }
+
+
+            if (!hasStarted) return;
+            if (!shouldDecay) return;
+            slider.value -= decayRate * Time.deltaTime;
+
+            if (Input.anyKeyDown)
+            {
+                slider.value += tapIncrease;
+            }
+
+            if (slider.value <= 0f)
+            {
+                FailGame();
+            }
+        }
+
+        private void FailGame()
+        {
+            Debug.Log("Game Failed!");
+            shouldDecay = false;
+            hasLost = true;
+            // Your fail logic here
+
+            runningObjects.SetActive(false);
+            deadSprite.SetActive(true);
+        }
+
+        public void StopDecay()
+        {
+            shouldDecay = false;
+            handleAnim.Play("RunAwayAnim");
+        }
+
+        public void StartGame()
+        {
+            hasStarted = true;
         }
     }
-
-    private void FailGame()
-    {
-        Debug.Log("Game Failed!");
-        shouldDecay = false;
-        hasLost = true;
-        // Your fail logic here
-
-        runningObjects.SetActive(false);
-        deadSprite.SetActive(true);
-    }
-
-    public void StopDecay()
-    {
-        shouldDecay = false ;
-        handleAnim.Play("RunAwayAnim");
-    }
-
-    public void StartGame()
-    {
-        hasStarted = true;
-    }
-}   
+}

@@ -1,20 +1,23 @@
 ﻿using UnityEngine;
 
-public class InterpolatedItem : MonoBehaviour
+namespace Julio.Utils
 {
-    [SerializeField] private string playerTag = "Player";
-
-    public bool isOverlapping { get; private set; } = false;
-
-    private void OnTriggerEnter2D(Collider2D other)
+    public class InterpolatedItem : MonoBehaviour
     {
-        if (other.CompareTag(playerTag))
-            isOverlapping = true;
-    }
+        [SerializeField] private string playerTag = "Player";
 
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag(playerTag))
-            isOverlapping = false;
+        public bool isOverlapping { get; private set; } = false;
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.CompareTag(playerTag))
+                isOverlapping = true;
+        }
+
+        private void OnTriggerExit2D(Collider2D other)
+        {
+            if (other.CompareTag(playerTag))
+                isOverlapping = false;
+        }
     }
 }

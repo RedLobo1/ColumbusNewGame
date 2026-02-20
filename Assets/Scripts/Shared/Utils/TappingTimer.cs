@@ -1,60 +1,63 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class TappingTimer : MonoBehaviour
+namespace Julio.Utils
 {
-    [SerializeField] private float duration = 5f;
-    [SerializeField] private GameObject countdownTextObject;
-    [SerializeField] private float countdownDuration = 3f;
-    public UnityEvent onMinigameEnd;
-    public UnityEvent onMinigameStart;
-
-    private float timeRemaining;
-    private bool isRunning = false;
-    private float countdownTimer;
-
-
-
-    private void Start()
+    public class TappingTimer : MonoBehaviour
     {
-        timeRemaining = duration;
-        countdownTimer = countdownDuration;
+        [SerializeField] private float duration = 5f;
+        [SerializeField] private GameObject countdownTextObject;
+        [SerializeField] private float countdownDuration = 3f;
+        public UnityEvent onMinigameEnd;
+        public UnityEvent onMinigameStart;
 
-        if (countdownTextObject != null)
-            countdownTextObject.SetActive(true);
-    }
+        private float timeRemaining;
+        private bool isRunning = false;
+        private float countdownTimer;
 
-    private void Update()
-    {
-        if (!isRunning)
+
+
+        private void Start()
         {
-            countdownTimer -= Time.deltaTime;
+            timeRemaining = duration;
+            countdownTimer = countdownDuration;
 
-            if (countdownTimer <= 0f)
+            if (countdownTextObject != null)
+                countdownTextObject.SetActive(true);
+        }
+
+        private void Update()
+        {
+            if (!isRunning)
             {
-                if (countdownTextObject != null)
-                    countdownTextObject.SetActive(false);
+                countdownTimer -= Time.deltaTime;
 
-                isRunning = true;
-                onMinigameStart?.Invoke();
+                if (countdownTimer <= 0f)
+                {
+                    if (countdownTextObject != null)
+                        countdownTextObject.SetActive(false);
+
+                    isRunning = true;
+                    onMinigameStart?.Invoke();
+                }
+
+                return;
             }
 
-            return;
+            timeRemaining -= Time.deltaTime;
+
+            if (timeRemaining <= 0f)
+            {
+                timeRemaining = 0f;
+                EndMinigame();
+            }
         }
 
-        timeRemaining -= Time.deltaTime;
-
-        if (timeRemaining <= 0f)
+        private void EndMinigame()
         {
-            timeRemaining = 0f;
-            EndMinigame();
+            isRunning = false;
+            onMinigameEnd?.Invoke();
+            Debug.Log("Minigame Ended!");
         }
-    }
-
-    private void EndMinigame()
-    {
-        isRunning = false;
-        onMinigameEnd?.Invoke();
-        Debug.Log("Minigame Ended!");
     }
 }

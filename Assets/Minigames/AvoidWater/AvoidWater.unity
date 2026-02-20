@@ -428,19 +428,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4048034746874744602, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1143821300}
+    - target: {fileID: 4048034746874744602, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048034746874744602, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7797553306704400954, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
       propertyPath: m_Name
       value: PF_InstructionCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 7797553306704400954, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
+--- !u!114 &801514309 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3266801894179163360, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
+  m_PrefabInstance: {fileID: 801514308}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1003710873
 GameObject:
   m_ObjectHideFlags: 0
@@ -713,6 +732,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2895116995370580505, guid: 24b4f9c7ef0fcae44bc20beacc5d676f, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1143821300}
+    - target: {fileID: 2895116995370580505, guid: 24b4f9c7ef0fcae44bc20beacc5d676f, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2895116995370580505, guid: 24b4f9c7ef0fcae44bc20beacc5d676f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 4170152341681578316, guid: 24b4f9c7ef0fcae44bc20beacc5d676f, type: 3}
       propertyPath: m_Name
       value: PF_TimerCanvas
@@ -958,17 +989,6 @@ Transform:
   - {fileID: 1564665628}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1897233116 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 54411234614829243, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
-  m_PrefabInstance: {fileID: 801514308}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2005726521
 GameObject:
   m_ObjectHideFlags: 0
@@ -1001,6 +1021,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameDuration: 5
   instructionDuration: 1.5
+  instructionText: Avoid!
+  instructionColor: {r: 1, g: 1, b: 1, a: 1}
   useWinResultState: 0
   useLoseResultState: 0
   resultDuration: 1.5
@@ -1014,7 +1036,7 @@ MonoBehaviour:
   loseAudio: {fileID: 0}
   timeProgressBar: {fileID: 240579868}
   instructionCanvas: {fileID: 592447445}
-  instructionImage: {fileID: 1897233116}
+  instructionDisplayText: {fileID: 801514309}
   minigameContainer: {fileID: 1828043026}
   instructionSprite: {fileID: 5666552350422210624, guid: 26d7f1758cd35044ea755f4281c4f6cd, type: 3}
   instructionAnimName: PLACEHOLDER_InstructionImage
@@ -1149,6 +1171,18 @@ PrefabInstance:
     - target: {fileID: 2536039345778129253, guid: 79727351d6936ef4a8c6404e56db3b84, type: 3}
       propertyPath: m_Name
       value: PF_ResultCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4047317431578229875, guid: 79727351d6936ef4a8c6404e56db3b84, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1143821300}
+    - target: {fileID: 4047317431578229875, guid: 79727351d6936ef4a8c6404e56db3b84, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4047317431578229875, guid: 79727351d6936ef4a8c6404e56db3b84, type: 3}
+      propertyPath: m_SortingOrder
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4703653003388156307, guid: 79727351d6936ef4a8c6404e56db3b84, type: 3}
       propertyPath: m_SizeDelta.x
