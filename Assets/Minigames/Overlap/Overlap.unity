@@ -937,7 +937,7 @@ MonoBehaviour:
   timeProgressBar: {fileID: 1549503231}
   resultDuration: 3
   winPrefab: {fileID: 6363590219452827602, guid: eb4b2874acd16cd499838b5e4a2e27e2, type: 3}
-  losePrefab: {fileID: 0}
+  losePrefab: {fileID: 1920216950588123387, guid: 1814e57f18e9fa1468ba7f0f267afb20, type: 3}
   instructionMusic: {fileID: 0}
   gameplayMusic: {fileID: 0}
   winAudio: {fileID: 0}

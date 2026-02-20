@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shipTransform: {fileID: 695641817}
+  shipVisual: {fileID: 340901776}
   nodePoints:
   - {fileID: 1251020129}
   - {fileID: 2070755784}
