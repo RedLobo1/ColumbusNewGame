@@ -12,7 +12,7 @@ namespace Julio.Core
         [Header("Player Stats")]
         [SerializeField] private int maxLives = 3;
         private int _currentLives;
-        [SerializeField] private int successfulGames = 0;
+        [SerializeField] public int successfulGames = 0;
         
         [Header("Difficulty")]
         public float globalSpeedMultiplier = 1f;
