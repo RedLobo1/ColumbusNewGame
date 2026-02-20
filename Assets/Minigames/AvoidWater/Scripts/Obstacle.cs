@@ -17,6 +17,9 @@ namespace Julio.Minigames.AvoidWater
         private AvoidWaterController _controller;
         private SpriteRenderer _spriteRenderer;
 
+        [Header("Difficulty")]
+        [SerializeField] private float speedIncreasePerTwoGames = 0.1f;
+
         private void Awake()
         {
             _controller = Object.FindAnyObjectByType<AvoidWaterController>();
@@ -28,24 +31,25 @@ namespace Julio.Minigames.AvoidWater
             UpdateSortingOrder();
         }
 
+
+
         void Update()
-        { 
-            // Use the global speed multiplier from the core GameManager
+        {
             float currentSpeed = baseSpeed;
-            
+
             if (GameManager.Instance != null)
             {
                 currentSpeed *= GameManager.Instance.globalSpeedMultiplier;
+                currentSpeed *= 1 + (GameManager.Instance.successfulGames / 2) * speedIncreasePerTwoGames;
             }
 
             transform.Translate(Vector2.left * currentSpeed * Time.deltaTime);
-
             if (transform.position.x < leftLimit)
             {
                 Destroy(gameObject);
             }
         }
-        
+
         /// <summary>
         /// Assigns the correct sorting order based on the Y position of the obstacle.
         /// </summary>

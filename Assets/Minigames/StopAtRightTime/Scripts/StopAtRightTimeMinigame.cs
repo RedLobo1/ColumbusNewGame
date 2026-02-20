@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Julio.Core;
+using UnityEngine;
 
 namespace Julio.Minigames.StopAtRightTime
 {
@@ -25,14 +26,27 @@ namespace Julio.Minigames.StopAtRightTime
         
         private StopAtRightTimeController _controller;
 
-        private void Awake()
-        {
-            _controller = Object.FindAnyObjectByType<StopAtRightTimeController>();
-        }
+        [Header("Audio")]
+        [SerializeField] private AudioSource audioSource;
+        [SerializeField] private AudioClip themeClip;
+        [SerializeField] private AudioClip successClip;
+        [SerializeField] private AudioClip failClip;
 
+        
         private void OnEnable()
         {
             StartMinigame();
+        }
+
+        [Header("Difficulty")]
+        [SerializeField] private float speedIncreasePerTwoGames = 0.2f;
+
+        private float _baseInterpolationDuration;
+
+        private void Awake()
+        {
+            _controller = Object.FindAnyObjectByType<StopAtRightTimeController>();
+            _baseInterpolationDuration = interpolationDuration;
         }
 
         public void StartMinigame()
@@ -42,7 +56,12 @@ namespace Julio.Minigames.StopAtRightTime
             timer = timerDuration;
             isRunning = true;
             isStopped = false;
+
+            interpolationDuration = _baseInterpolationDuration / (1 + (GameManager.Instance.successfulGames / 2) * speedIncreasePerTwoGames);
+
+            PlayClip(themeClip);
         }
+
 
         private void Update()
         {
@@ -98,13 +117,20 @@ namespace Julio.Minigames.StopAtRightTime
         private void CheckOverlap()
         {
             if (interpolatedItem == null) return;
-
             hasSucceeded = interpolatedItem.isOverlapping;
-
             Debug.Log($"[StopMinigame] Result: {(hasSucceeded ? "SUCCESS" : "FAIL")}");
-            
+            PlayClip(hasSucceeded ? successClip : failClip);
             _controller.EndMinigame(hasSucceeded);
         }
+
+        private void PlayClip(AudioClip clip)
+        {
+            if (audioSource == null || clip == null) return;
+            audioSource.Stop();
+            audioSource.clip = clip;
+            audioSource.Play();
+        }
+
 
         private void OnDrawGizmosSelected()
         {

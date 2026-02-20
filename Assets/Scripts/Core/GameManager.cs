@@ -19,6 +19,8 @@ namespace Julio.Core
         
         public int CurrentLives => _currentLives;
 
+        public bool lastGameWon;
+
         private void Awake()
         {
             if (Instance == null)
@@ -43,6 +45,7 @@ namespace Julio.Core
             {
                 successfulGames++;
                 // globalSpeedMultiplier += 0.1f;
+                lastGameWon = true;
             }
             else
             {
@@ -50,6 +53,8 @@ namespace Julio.Core
                 // Update UI on the map immediately
                 WorldMapController map = Object.FindAnyObjectByType<WorldMapController>();
                 if (map != null) map.UpdateHeartsUI(_currentLives);
+
+                lastGameWon=false;
 
                 if (_currentLives <= 0)
                 {

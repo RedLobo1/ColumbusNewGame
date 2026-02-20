@@ -1,3 +1,4 @@
+using Julio.Core;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,9 +20,15 @@ namespace Julio.Minigames.Tapping
         
         private TappingController _controller;
 
+        [Header("Difficulty")]
+        [SerializeField] private float decayIncreasePerTwoGames = 0.5f;
+
+        private float _baseDecayRate;
+
         private void Awake()
         {
             _controller = Object.FindAnyObjectByType<TappingController>();
+            _baseDecayRate = decayRate;
         }
 
         private void OnEnable()
@@ -29,8 +36,11 @@ namespace Julio.Minigames.Tapping
             slider.minValue = 0f;
             slider.maxValue = 100f;
             slider.value = 60f;
+
+            decayRate = _baseDecayRate + (GameManager.Instance.successfulGames / 2) * decayIncreasePerTwoGames;
         }
 
+        
         private void Update()
         {
             if (!hasStarted)
