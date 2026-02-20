@@ -16,6 +16,11 @@ namespace Julio.Core
         [SerializeField] private GameObject shipVisual;   
         [SerializeField] private List<Transform> nodePoints;
         [SerializeField] private float travelDuration = 3.0f;
+        [SerializeField] private float adjustedTravelDuration
+        {
+            get { return this.travelDuration / (1 + GameManager.Instance.successfulGames * 0.2f); }
+        }
+
 
         [Header("Minigame Settings")]
         [SerializeField] private List<string> minigameSceneNames;
@@ -64,10 +69,10 @@ namespace Julio.Core
             float elapsed = 0;
             Vector3 startPos = shipTransform.position;
 
-            while (elapsed < travelDuration)
+            while (elapsed < adjustedTravelDuration)
             {
                 elapsed += Time.deltaTime;
-                shipTransform.position = Vector3.Lerp(startPos, targetPosition, elapsed / travelDuration);
+                shipTransform.position = Vector3.Lerp(startPos, targetPosition, elapsed / adjustedTravelDuration);
                 yield return null;
             }
             
