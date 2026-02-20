@@ -15,6 +15,10 @@ namespace Julio.Core
         [Header("Base Settings")]
         [SerializeField] protected float gameDuration = 5f;
         [SerializeField] protected float instructionDuration = 1.5f;
+        
+        [Header("Instruction Settings")]
+        [SerializeField] private string instructionText = "DO SOMETHING!";
+        [SerializeField] private Color instructionColor = Color.white;
 
         [Header("Result Logic")]
         [SerializeField] private bool useWinResultState = true;
@@ -36,7 +40,7 @@ namespace Julio.Core
         [Header("Base UI References")]
         [SerializeField] private Slider timeProgressBar;
         [SerializeField] private GameObject instructionCanvas;
-        [SerializeField] private Image instructionImage;
+        [SerializeField] private TextMeshProUGUI instructionDisplayText; 
 
         [Header("Base Content References")]
         [SerializeField] private GameObject minigameContainer;
@@ -86,7 +90,7 @@ namespace Julio.Core
             _timeLeft = gameDuration;
             
             _backgroundAnim = instructionCanvas?.GetComponent<Animation>();
-            _instructionAnim = instructionImage?.GetComponent<Animation>();
+            _instructionAnim = instructionDisplayText?.GetComponent<Animation>();
             _resultAnim = resultImage?.GetComponent<Animation>();
             
             SetupInitialState();
@@ -117,7 +121,8 @@ namespace Julio.Core
         {
             if (instructionCanvas != null) instructionCanvas.SetActive(true);
             if (resultCanvas != null) resultCanvas.SetActive(false);
-            if (instructionImage != null) instructionImage.sprite = instructionSprite;
+            if (instructionDisplayText != null) instructionDisplayText.text = instructionText;
+            if (instructionDisplayText != null) instructionDisplayText.color = instructionColor;
             if (minigameContainer != null) minigameContainer.SetActive(false);
             if (timeProgressBar != null)
             {
