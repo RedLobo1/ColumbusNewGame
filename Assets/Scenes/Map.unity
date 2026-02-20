@@ -160,7 +160,7 @@ MonoBehaviour:
   - AvoidWater
   - Dancing
   - DontPress
-  - OverlapMinigame
+  - Overlap
   - StopAtRightTime
   - Tapping
   blurOverlay: {fileID: 1172523896}
