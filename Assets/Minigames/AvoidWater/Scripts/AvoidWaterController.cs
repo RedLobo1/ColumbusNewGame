@@ -12,5 +12,12 @@ namespace Julio.Minigames.AvoidWater
     {
         [Header("Logic Data")]
         public float[] lanes = { -2f, 0f, 2f };
+        
+        [SerializeField] private Animator animator;
+
+        protected override void OnLose()
+        {
+            animator.Play("PlayerHit");
+        }
     }
 }

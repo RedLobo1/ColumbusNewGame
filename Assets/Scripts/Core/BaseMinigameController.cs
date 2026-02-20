@@ -81,6 +81,16 @@ namespace Julio.Core
         }
         
         /// <summary>
+        /// Logic triggered when the player wins the minigame.
+        /// </summary>
+        protected virtual void OnWin() { }
+
+        /// <summary>
+        /// Logic triggered when the player loses the minigame.
+        /// </summary>
+        protected virtual void OnLose() { }
+        
+        /// <summary>
         /// Finds the camera within the same scene as this object.
         /// </summary>
         private Camera FindLocalCamera()
@@ -176,6 +186,9 @@ namespace Julio.Core
         {
             if (!_isGameActive) return;
             _isGameActive = false;
+            
+            if (wasSuccessful) OnWin();
+            else OnLose();
             
             if (_audioSource != null) _audioSource.Stop();
             if (timeProgressBar != null) timeProgressBar.gameObject.SetActive(false);

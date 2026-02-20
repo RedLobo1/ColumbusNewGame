@@ -16,7 +16,6 @@ namespace Julio.Minigames.AvoidWater
         private int _currentLane = 1;
         private AvoidWaterController _controller;
         private SpriteRenderer _spriteRenderer;
-        public Animator Animator;
 
         private void Awake()
         {
@@ -94,8 +93,6 @@ namespace Julio.Minigames.AvoidWater
             if (collision.CompareTag("Obstacle"))
             {
                 _controller?.EndMinigame(false);
-                Animator.Play("PlayerHit");
-
             }
         }
     }
