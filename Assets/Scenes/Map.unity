@@ -168,6 +168,9 @@ MonoBehaviour:
   - Tapping
   blurCamera: {fileID: 1731771658}
   blurOverlay: {fileID: 1172523896}
+  blurMaterial: {fileID: 2100000, guid: b3a07c12d509e254d97255eafc993b99, type: 2}
+  blurTransitionDuration: 1
+  maxBlurSize: 3
   heartIcons:
   - {fileID: 1427504965}
   - {fileID: 1604441357}
