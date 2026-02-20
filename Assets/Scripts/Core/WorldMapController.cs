@@ -15,6 +15,7 @@ namespace Julio.Core
         [SerializeField] private GameObject shipVisual;   
         [SerializeField] private List<Transform> nodePoints;
         [SerializeField] private float travelDuration = 3.0f;
+        [SerializeField] private float waitAfterArrival = 1.0f;
 
         [Header("Minigame Settings")]
         [SerializeField] private List<string> minigameSceneNames;
@@ -43,6 +44,7 @@ namespace Julio.Core
                 int nextNode = GetRandomNodeIndex();
                 yield return StartCoroutine(MoveShipRoutine(nodePoints[nextNode].position));
                 _lastNodeIndex = nextNode;
+                yield return new WaitForSeconds(waitAfterArrival);
 
                 // 2. Load Minigame
                 string sceneToLoad = GetRandomMinigameScene();
