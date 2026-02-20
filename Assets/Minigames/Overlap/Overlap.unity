@@ -935,9 +935,12 @@ MonoBehaviour:
   instructionColor: {r: 1, g: 1, b: 1, a: 1}
   instructionAnimName: InstructionShow
   timeProgressBar: {fileID: 1549503231}
-  resultDuration: 3
+  winDuration: 1.5
   winPrefab: {fileID: 6363590219452827602, guid: eb4b2874acd16cd499838b5e4a2e27e2, type: 3}
+  winPosition: {x: 0, y: 0, z: 0}
+  loseDuration: 2
   losePrefab: {fileID: 1920216950588123387, guid: 1814e57f18e9fa1468ba7f0f267afb20, type: 3}
+  losePosition: {x: 0, y: 0, z: 0}
   instructionMusic: {fileID: 0}
   gameplayMusic: {fileID: 0}
   winAudio: {fileID: 0}
@@ -1598,7 +1601,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.37}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1608,7 +1611,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.76, y: 4.73}
+  m_Size: {x: 0.63, y: 4.73}
   m_EdgeRadius: 0
 --- !u!212 &1974911822
 SpriteRenderer:
@@ -1982,7 +1985,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1453454614206284589, guid: 91d0780edbcf98448a1f3a77091ae94f, type: 3}
       propertyPath: m_Size.x
-      value: 2.52
+      value: 1.59
       objectReference: {fileID: 0}
     - target: {fileID: 1453454614206284589, guid: 91d0780edbcf98448a1f3a77091ae94f, type: 3}
       propertyPath: m_Size.y
@@ -2054,7 +2057,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4763729211405331587, guid: 91d0780edbcf98448a1f3a77091ae94f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5347540264406846141, guid: 91d0780edbcf98448a1f3a77091ae94f, type: 3}
       propertyPath: m_LocalScale.x
@@ -2074,7 +2077,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7485154906731720581, guid: 91d0780edbcf98448a1f3a77091ae94f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9189563379918268797, guid: 91d0780edbcf98448a1f3a77091ae94f, type: 3}
       propertyPath: m_Name
