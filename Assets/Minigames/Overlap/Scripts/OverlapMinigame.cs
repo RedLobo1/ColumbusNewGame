@@ -1,4 +1,5 @@
-﻿using Julio.Utils;
+﻿using Julio.Core;
+using Julio.Utils;
 using UnityEngine;
 
 namespace Julio.Minigames.Overlap
@@ -27,6 +28,9 @@ namespace Julio.Minigames.Overlap
 
         [Header("Countdown")][SerializeField] private float countdownDuration = 5f;
 
+        [Header("Difficulty")]
+        [SerializeField] private float speedIncreasePerTwoGames = 0.1f;
+
         // Result
         public bool hasSucceeded { get; private set; } = false;
 
@@ -37,16 +41,20 @@ namespace Julio.Minigames.Overlap
         private GameObject _currentCountdownObject = null; // Track what's currently shown
         
         private OverlapController _controller;
-
+        private float _baseInterpolationDuration;
         private void Awake()
         {
             _controller = Object.FindAnyObjectByType<OverlapController>();
+            _baseInterpolationDuration = interpolationDuration;
         }
-
         private void OnEnable()
         {
             StartMinigame();
         }
+
+     
+
+      
 
         public void StartMinigame()
         {
@@ -54,7 +62,9 @@ namespace Julio.Minigames.Overlap
             countdownTimer = countdownDuration;
             interpolationTimer = 0f;
             isRunning = true;
-            _currentCountdownObject = null; // Reset so the first call goes through
+            _currentCountdownObject = null;
+
+            interpolationDuration = _baseInterpolationDuration / (1 + (GameManager.Instance.successfulGames / 2) * speedIncreasePerTwoGames);
 
             SetActiveCountdownObject(idleObject);
         }

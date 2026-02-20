@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Julio.Core;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -109,6 +110,7 @@ namespace Julio.Minigames.Dancing
         /// <summary>Call this to (re)start the minigame.</summary>
         public void StartMinigame()
         {
+            difficulty = 1 + (GameManager.Instance.successfulGames / 4);
             hasSucceeded = false;
             setsCompleted = 0;
             gameActive = true;
@@ -116,6 +118,7 @@ namespace Julio.Minigames.Dancing
             SetIndicator(false, false);
             StartCoroutine(RunMinigame());
         }
+
 
         // ─── Core Routine ──────────────────────────────────────────────────────────
 

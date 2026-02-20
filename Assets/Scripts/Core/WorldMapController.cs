@@ -48,6 +48,11 @@ namespace Julio.Core
         [SerializeField] UnityEvent onMinigameLoad;
         [SerializeField] UnityEvent onMinigameUnload;
 
+        [SerializeField]AudioSource minigameWon;
+        [SerializeField]AudioSource minigameLost;
+        [SerializeField]AudioSource harbourBell;
+
+
         private void Start()
         {
             if (nodePoints.Count > 0)
@@ -72,6 +77,8 @@ namespace Julio.Core
                 int nextNode = GetRandomNodeIndex();
                 yield return StartCoroutine(MoveShipRoutine(nodePoints[nextNode].position));
                 _lastNodeIndex = nextNode;
+                harbourBell.Play();
+
                 yield return new WaitForSeconds(waitAfterArrival);
 
                 // 2. Load Minigame
@@ -130,6 +137,7 @@ namespace Julio.Core
             if (string.IsNullOrEmpty(_currentLoadedScene)) return;
 
             StartCoroutine(UnloadRoutine());
+
         }
 
         private IEnumerator UnloadRoutine()
@@ -152,6 +160,12 @@ namespace Julio.Core
             if (blurOverlay != null) blurOverlay.SetActive(false);
             if (blurCamera != null) blurCamera.SetActive(false);
             onMinigameUnload?.Invoke();
+
+
+            // Play audio whether won or lost
+            if(GameManager.Instance.lastGameWon)
+            { minigameWon.Play(); }
+            else minigameLost.Play();   
 
         }
 
