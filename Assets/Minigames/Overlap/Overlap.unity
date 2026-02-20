@@ -1068,7 +1068,7 @@ MonoBehaviour:
   winPrefab: {fileID: 6363590219452827602, guid: eb4b2874acd16cd499838b5e4a2e27e2, type: 3}
   winPosition: {x: 0, y: 0, z: 0}
   loseDuration: 2
-  losePrefab: {fileID: 1920216950588123387, guid: 1814e57f18e9fa1468ba7f0f267afb20, type: 3}
+  losePrefab: {fileID: 2082260885234899188, guid: a92d5e2869519bc4f95f1f8399bb9e8f, type: 3}
   losePosition: {x: 0, y: 0, z: 0}
   instructionMusic: {fileID: 0}
   gameplayMusic: {fileID: 0}
@@ -1740,7 +1740,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.63, y: 4.73}
+  m_Size: {x: 1.25, y: 4.73}
   m_EdgeRadius: 0
 --- !u!212 &1974911822
 SpriteRenderer:
@@ -1918,7 +1918,7 @@ Transform:
   m_GameObject: {fileID: 2110541524}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.92, y: 4.72, z: 0}
+  m_LocalPosition: {x: 7.07, y: 4.61, z: 0}
   m_LocalScale: {x: 0.91515, y: 0.91515, z: 0.91515}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1987,7 +1987,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.33
+  orthographic size: 4.81
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2114,7 +2114,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1453454614206284589, guid: 91d0780edbcf98448a1f3a77091ae94f, type: 3}
       propertyPath: m_Size.x
-      value: 1.59
+      value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: 1453454614206284589, guid: 91d0780edbcf98448a1f3a77091ae94f, type: 3}
       propertyPath: m_Size.y
@@ -2122,7 +2122,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1453454614206284589, guid: 91d0780edbcf98448a1f3a77091ae94f, type: 3}
       propertyPath: m_Offset.x
-      value: -0.45
+      value: -0.39
       objectReference: {fileID: 0}
     - target: {fileID: 1453454614206284589, guid: 91d0780edbcf98448a1f3a77091ae94f, type: 3}
       propertyPath: m_Offset.y
@@ -2204,9 +2204,21 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -0.78
       objectReference: {fileID: 0}
+    - target: {fileID: 6027641678420704861, guid: 91d0780edbcf98448a1f3a77091ae94f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.92511666
+      objectReference: {fileID: 0}
+    - target: {fileID: 6027641678420704861, guid: 91d0780edbcf98448a1f3a77091ae94f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0103
+      objectReference: {fileID: 0}
     - target: {fileID: 7485154906731720581, guid: 91d0780edbcf98448a1f3a77091ae94f, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8091462818270205650, guid: 91d0780edbcf98448a1f3a77091ae94f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9189563379918268797, guid: 91d0780edbcf98448a1f3a77091ae94f, type: 3}
       propertyPath: m_Name
