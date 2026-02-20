@@ -12,8 +12,6 @@ namespace Julio.Minigames.StopAtRightTime
         [SerializeField] private float interpolationDuration = 2f;
         [SerializeField] private bool pingPong = true;
 
-
-
         [Header("Timer")] [SerializeField] private float timerDuration = 5f;
 
         // Result
@@ -24,8 +22,15 @@ namespace Julio.Minigames.StopAtRightTime
         private float timer;
         private bool isRunning = false;
         private bool isStopped = false;
+        
+        private StopAtRightTimeController _controller;
 
-        private void Start()
+        private void Awake()
+        {
+            _controller = Object.FindAnyObjectByType<StopAtRightTimeController>();
+        }
+
+        private void OnEnable()
         {
             StartMinigame();
         }
@@ -97,6 +102,8 @@ namespace Julio.Minigames.StopAtRightTime
             hasSucceeded = interpolatedItem.isOverlapping;
 
             Debug.Log($"[StopMinigame] Result: {(hasSucceeded ? "SUCCESS" : "FAIL")}");
+            
+            _controller.EndMinigame(hasSucceeded);
         }
 
         private void OnDrawGizmosSelected()

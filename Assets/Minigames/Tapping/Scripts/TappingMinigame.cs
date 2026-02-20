@@ -16,8 +16,15 @@ namespace Julio.Minigames.Tapping
         [SerializeField] GameObject runningObjects;
         [SerializeField] GameObject deadSprite;
         [SerializeField] Animator handleAnim;
+        
+        private TappingController _controller;
 
-        private void Start()
+        private void Awake()
+        {
+            _controller = Object.FindAnyObjectByType<TappingController>();
+        }
+
+        private void OnEnable()
         {
             slider.minValue = 0f;
             slider.maxValue = 100f;
@@ -56,12 +63,16 @@ namespace Julio.Minigames.Tapping
 
             runningObjects.SetActive(false);
             deadSprite.SetActive(true);
+            
+            _controller.EndMinigame(false);
         }
 
         public void StopDecay()
         {
             shouldDecay = false;
             handleAnim.Play("RunAwayAnim");
+            
+            _controller.EndMinigame(true);
         }
 
         public void StartGame()

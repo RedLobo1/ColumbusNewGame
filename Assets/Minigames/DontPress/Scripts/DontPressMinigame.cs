@@ -11,6 +11,13 @@ namespace Julio.Minigames.DontPress
         [SerializeField] GameObject loseSprite;
         [SerializeField] GameObject winSprite;
         [SerializeField] GameObject baseSprite;
+        
+        private DontPressController _controller;
+
+        private void Awake()
+        {
+            _controller = Object.FindAnyObjectByType<DontPressController>();
+        }
 
         void Update()
         {
@@ -20,6 +27,8 @@ namespace Julio.Minigames.DontPress
                 hasPressed = true;
                 loseSprite.SetActive(true);
                 baseSprite.SetActive(false);
+                
+                _controller.EndMinigame(false);
             }
         }
 
@@ -29,6 +38,8 @@ namespace Julio.Minigames.DontPress
             {
                 baseSprite.SetActive(false);
                 winSprite.SetActive(true);
+                
+                _controller.EndMinigame(true);
             }
         }
 
