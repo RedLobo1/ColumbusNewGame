@@ -16,6 +16,7 @@ namespace Julio.Core
         [SerializeField] private List<Transform> nodePoints;
         [SerializeField] private float travelDuration = 3.0f;
         [SerializeField] private float waitAfterArrival = 1.0f;
+        [SerializeField] private float waitAfterMinigame = 1.0f;
 
         [Header("Minigame Settings")]
         [SerializeField] private List<string> minigameSceneNames;
@@ -62,6 +63,7 @@ namespace Julio.Core
 
                 // 3. Wait until minigame finishes (GameManager will notify us)
                 yield return new WaitUntil(() => _currentLoadedScene == null);
+                yield return new WaitForSeconds(waitAfterMinigame);
             }
         }
 
