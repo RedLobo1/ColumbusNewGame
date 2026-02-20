@@ -1,12 +1,12 @@
-﻿using System.Collections;
-using Julio.Utils;
+﻿using Julio.Utils;
 using UnityEngine;
 
 namespace Julio.Minigames.Overlap
 {
     public class OverlapMinigame : MonoBehaviour
     {
-        [Header("Interpolated Item")] [SerializeField]
+        [Header("Interpolated Item")]
+        [SerializeField]
         private InterpolatedItem interpolatedItem;
 
         [SerializeField] private Transform pointA;
@@ -14,21 +14,19 @@ namespace Julio.Minigames.Overlap
         [SerializeField] private float interpolationDuration = 2f;
         [SerializeField] private bool pingPong = true;
 
-        [Header("Player")] [SerializeField] private Transform player;
+        [Header("Player")][SerializeField] private Transform player;
         [SerializeField] private float playerMoveSpeed = 3f;
         [SerializeField] private float playerMinX = -5f;
         [SerializeField] private float playerMaxX = 5f;
 
-        [Header("Player Countdown Sprites")] [SerializeField]
-        private SpriteRenderer playerSpriteRenderer;
+        [Header("Player Countdown GameObjects")]
+        [SerializeField]
+        private GameObject idleObject;
+        [SerializeField] private GameObject almostDoneObject;
+        [SerializeField] private GameObject finishedObject;
+        [SerializeField] private float almostDoneThreshold = 0.33f;
 
-        [SerializeField] private Sprite idleSprite;
-        [SerializeField] private Sprite almostDoneSprite;
-        [SerializeField] private Sprite finishedSprite;
-        [SerializeField] private float almostDoneThreshold = 0.33f; // fraction of countdown remaining
-
-        [Header("Countdown")] [SerializeField] private float countdownDuration = 5f;
-
+        [Header("Countdown")][SerializeField] private float countdownDuration = 5f;
 
         // Result
         public bool hasSucceeded { get; private set; } = false;
@@ -37,6 +35,7 @@ namespace Julio.Minigames.Overlap
         private float countdownTimer;
         private float interpolationTimer;
         private bool isRunning = false;
+        private GameObject _currentCountdownObject = null; // Track what's currently shown
 
         private void Start()
         {
@@ -49,9 +48,9 @@ namespace Julio.Minigames.Overlap
             countdownTimer = countdownDuration;
             interpolationTimer = 0f;
             isRunning = true;
+            _currentCountdownObject = null; // Reset so the first call goes through
 
-            if (playerSpriteRenderer != null && idleSprite != null)
-                playerSpriteRenderer.sprite = idleSprite;
+            SetActiveCountdownObject(idleObject);
         }
 
         private void Update()
@@ -66,10 +65,9 @@ namespace Julio.Minigames.Overlap
         private void HandleItemInterpolation()
         {
             interpolationTimer += Time.deltaTime;
-            float t = (interpolationTimer % interpolationDuration) / interpolationDuration;
-
-            if (pingPong)
-                t = Mathf.PingPong(interpolationTimer / interpolationDuration, 1f);
+            float t = pingPong
+                ? Mathf.PingPong(interpolationTimer / interpolationDuration, 1f)
+                : (interpolationTimer % interpolationDuration) / interpolationDuration;
 
             if (interpolatedItem != null && pointA != null && pointB != null)
                 interpolatedItem.transform.position = Vector3.Lerp(pointA.position, pointB.position, t);
@@ -77,14 +75,13 @@ namespace Julio.Minigames.Overlap
 
         private void HandlePlayerMovement()
         {
+            if (player == null) return;
+
             float input = Input.GetAxis("Horizontal");
-            if (player != null)
-            {
-                Vector3 pos = player.position;
-                pos.x += input * playerMoveSpeed * Time.deltaTime;
-                pos.x = Mathf.Clamp(pos.x, playerMinX, playerMaxX);
-                player.position = pos;
-            }
+            Vector3 pos = player.position;
+            pos.x += input * playerMoveSpeed * Time.deltaTime;
+            pos.x = Mathf.Clamp(pos.x, playerMinX, playerMaxX);
+            player.position = pos;
         }
 
         private void HandleCountdown()
@@ -92,25 +89,12 @@ namespace Julio.Minigames.Overlap
             countdownTimer -= Time.deltaTime;
             float fraction = countdownTimer / countdownDuration;
 
-            // Update sprite based on countdown progress
-            if (playerSpriteRenderer != null)
-            {
-                if (fraction <= 0f)
-                {
-                    if (finishedSprite != null)
-                        playerSpriteRenderer.sprite = finishedSprite;
-                }
-                else if (fraction <= almostDoneThreshold)
-                {
-                    if (almostDoneSprite != null)
-                        playerSpriteRenderer.sprite = almostDoneSprite;
-                }
-                else
-                {
-                    if (idleSprite != null)
-                        playerSpriteRenderer.sprite = idleSprite;
-                }
-            }
+            if (fraction <= 0f)
+                SetActiveCountdownObject(finishedObject);
+            else if (fraction <= almostDoneThreshold)
+                SetActiveCountdownObject(almostDoneObject);
+            else
+                SetActiveCountdownObject(idleObject);
 
             if (countdownTimer <= 0f)
             {
@@ -120,18 +104,32 @@ namespace Julio.Minigames.Overlap
             }
         }
 
+        /// <summary>
+        /// Only swaps the active countdown GameObject if it has actually changed.
+        /// </summary>
+        private void SetActiveCountdownObject(GameObject target)
+        {
+            if (target == _currentCountdownObject) return; // Already showing this one, do nothing
+
+            if (idleObject != null) idleObject.SetActive(false);
+            if (almostDoneObject != null) almostDoneObject.SetActive(false);
+            if (finishedObject != null) finishedObject.SetActive(false);
+
+            if (target != null) target.SetActive(true);
+
+            _currentCountdownObject = target;
+        }
+
         private void CheckOverlap()
         {
             if (interpolatedItem == null) return;
 
             hasSucceeded = interpolatedItem.isOverlapping;
-
             Debug.Log($"[OverlapMinigame] Result: {(hasSucceeded ? "SUCCESS" : "FAIL")}");
         }
 
         private void OnDrawGizmosSelected()
         {
-            // Visualize interpolation path
             if (pointA != null && pointB != null)
             {
                 Gizmos.color = Color.yellow;
