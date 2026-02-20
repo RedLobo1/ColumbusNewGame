@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Minigames/AvoidWater/AvoidWater.unity
     guid: 1838d9dab4eb49f49aded91e2493a626
   - enabled: 1
-    path: Assets/Minigames/Don'tPress/DontPress.unity
+    path: Assets/Minigames/DontPress/DontPress.unity
     guid: 6147d64cc978a0f4b8cd3b737439774c
   - enabled: 1
     path: Assets/Minigames/Tapping/Tapping.unity

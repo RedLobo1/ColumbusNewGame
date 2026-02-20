@@ -4,17 +4,15 @@ namespace Julio.Minigames.StopAtRightTime
 {
     public class StopAtRightTimeController : MonoBehaviour
     {
-        [Header("Interpolated Item")] [SerializeField]
+        [Header("Interpolated Item")]
+        [SerializeField]
         private StopAtRightTimeItem interpolatedItem;
-
         [SerializeField] private Transform pointA;
         [SerializeField] private Transform pointB;
         [SerializeField] private float interpolationDuration = 2f;
         [SerializeField] private bool pingPong = true;
 
-
-
-        [Header("Timer")] [SerializeField] private float timerDuration = 5f;
+        [Header("Timer")][SerializeField] private float timerDuration = 5f;
 
         // Result
         public bool hasSucceeded { get; private set; } = false;
@@ -24,6 +22,9 @@ namespace Julio.Minigames.StopAtRightTime
         private float timer;
         private bool isRunning = false;
         private bool isStopped = false;
+
+        [Header("Visuals")]
+        public MovingLerpScript[] movingLerpScripts;
 
         private void Start()
         {
@@ -37,6 +38,10 @@ namespace Julio.Minigames.StopAtRightTime
             timer = timerDuration;
             isRunning = true;
             isStopped = false;
+
+            // Resume all lerp scripts when the minigame (re)starts
+            foreach (var lerpScript in movingLerpScripts)
+                if (lerpScript != null) lerpScript.ResumeMovement();
         }
 
         private void Update()
@@ -46,7 +51,6 @@ namespace Julio.Minigames.StopAtRightTime
             if (!isStopped)
             {
                 HandleItemInterpolation();
-
                 if (Input.anyKeyDown)
                     Stop();
             }
@@ -57,7 +61,6 @@ namespace Julio.Minigames.StopAtRightTime
         private void HandleItemInterpolation()
         {
             interpolationTimer += Time.deltaTime;
-
             float t = pingPong
                 ? Mathf.PingPong(interpolationTimer / interpolationDuration, 1f)
                 : (interpolationTimer % interpolationDuration) / interpolationDuration;
@@ -69,7 +72,6 @@ namespace Julio.Minigames.StopAtRightTime
         private void HandleTimer()
         {
             timer -= Time.deltaTime;
-
             if (timer <= 0f)
             {
                 timer = 0f;
@@ -80,9 +82,12 @@ namespace Julio.Minigames.StopAtRightTime
         private void Stop()
         {
             if (isStopped) return;
-
             isStopped = true;
             isRunning = false;
+
+            // Stop all lerp scripts alongside the minigame
+            foreach (var lerpScript in movingLerpScripts)
+                if (lerpScript != null) lerpScript.StopMovement();
 
             if (interpolatedItem != null)
                 interpolatedItem.PlayStopAnimation();
@@ -93,9 +98,7 @@ namespace Julio.Minigames.StopAtRightTime
         private void CheckOverlap()
         {
             if (interpolatedItem == null) return;
-
             hasSucceeded = interpolatedItem.isOverlapping;
-
             Debug.Log($"[StopMinigame] Result: {(hasSucceeded ? "SUCCESS" : "FAIL")}");
         }
 
