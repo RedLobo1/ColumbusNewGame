@@ -2716,7 +2716,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lerpSpeed: 10
   baseSortingOrder: 1
-  Animator: {fileID: 746120339}
 --- !u!1 &1611882841
 GameObject:
   m_ObjectHideFlags: 0
@@ -3086,9 +3085,12 @@ MonoBehaviour:
   instructionColor: {r: 1, g: 1, b: 1, a: 1}
   instructionAnimName: PLACEHOLDER_InstructionText
   timeProgressBar: {fileID: 240579868}
-  resultDuration: 3
+  winDuration: 3
   winPrefab: {fileID: 6363590219452827602, guid: eb4b2874acd16cd499838b5e4a2e27e2, type: 3}
+  winPosition: {x: 0, y: 0, z: 0}
+  loseDuration: 1.5
   losePrefab: {fileID: 0}
+  losePosition: {x: 0, y: 0, z: 0}
   instructionMusic: {fileID: 0}
   gameplayMusic: {fileID: 0}
   winAudio: {fileID: 0}
@@ -3097,6 +3099,7 @@ MonoBehaviour:
   - -2
   - 0
   - 2
+  animator: {fileID: 746120339}
 --- !u!4 &2005726523
 Transform:
   m_ObjectHideFlags: 0

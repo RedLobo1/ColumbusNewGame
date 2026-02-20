@@ -10,11 +10,14 @@ namespace Julio.Core
         public static GameManager Instance { get; private set; }
 
         [Header("Player Stats")]
-        [SerializeField] private int lives = 3;
-        [SerializeField] public int successfulGames = 0;
+        [SerializeField] private int maxLives = 3;
+        private int _currentLives;
+        [SerializeField] private int successfulGames = 0;
         
         [Header("Difficulty")]
         public float globalSpeedMultiplier = 1f;
+        
+        public int CurrentLives => _currentLives;
 
         private void Awake()
         {
@@ -22,6 +25,7 @@ namespace Julio.Core
             {
                 Instance = this;
                 DontDestroyOnLoad(gameObject);
+                _currentLives = maxLives;
             }
             else
             {
@@ -42,14 +46,22 @@ namespace Julio.Core
             }
             else
             {
-                lives--;
-                if (lives <= 0) Debug.Log("Game Over!");
+                _currentLives--; 
+                // Update UI on the map immediately
+                WorldMapController map = Object.FindAnyObjectByType<WorldMapController>();
+                if (map != null) map.UpdateHeartsUI(_currentLives);
+
+                if (_currentLives <= 0)
+                {
+                    Debug.Log("Game Over!");
+                    // To-do: Trigger Game Over Screen
+                }
             }
             
-            WorldMapController map = Object.FindAnyObjectByType<WorldMapController>();
-            if (map != null)
+            WorldMapController controller = Object.FindAnyObjectByType<WorldMapController>();
+            if (controller != null)
             {
-                map.UnloadMinigame();
+                controller.UnloadMinigame();
             }
         }
     }

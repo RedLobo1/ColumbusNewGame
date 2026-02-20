@@ -31,9 +31,13 @@ namespace Julio.Core
         [SerializeField] private Slider timeProgressBar;
 
         [Header("Result Settings")]
-        [SerializeField] private float resultDuration = 1.5f; 
+        [SerializeField] private float winDuration = 1.5f;
         [SerializeField] private GameObject winPrefab;
+        [SerializeField] private Vector3 winPosition = Vector3.zero;
+        [Space]
+        [SerializeField] private float loseDuration = 2.0f;
         [SerializeField] private GameObject losePrefab;
+        [SerializeField] private Vector3 losePosition = Vector3.zero;
 
         [Header("Audio Settings")]
         [SerializeField] private AudioClip instructionMusic;
@@ -79,6 +83,16 @@ namespace Julio.Core
             SetupInitialState();
             StartCoroutine(MinigameRoutine());
         }
+        
+        /// <summary>
+        /// Logic triggered when the player wins the minigame.
+        /// </summary>
+        protected virtual void OnWin() { }
+
+        /// <summary>
+        /// Logic triggered when the player loses the minigame.
+        /// </summary>
+        protected virtual void OnLose() { }
         
         /// <summary>
         /// Finds the camera within the same scene as this object.
@@ -177,6 +191,9 @@ namespace Julio.Core
             if (!_isGameActive) return;
             _isGameActive = false;
             
+            if (wasSuccessful) OnWin();
+            else OnLose();
+            
             if (_audioSource != null) _audioSource.Stop();
             if (timeProgressBar != null) timeProgressBar.gameObject.SetActive(false);
             
@@ -185,11 +202,13 @@ namespace Julio.Core
                 minigameContainer.SetActive(false);
             }
             
-            GameObject targetResult = wasSuccessful ? winPrefab : losePrefab;
+            GameObject targetPrefab = wasSuccessful ? winPrefab : losePrefab;
+            float targetDuration = wasSuccessful ? winDuration : loseDuration;
+            Vector3 targetPosition = wasSuccessful ? winPosition : losePosition;
 
-            if (targetResult != null)
+            if (targetDuration > 0)
             {
-                StartCoroutine(ResultRoutine(targetResult, wasSuccessful));
+                StartCoroutine(ResultRoutine(targetPrefab, targetPosition, targetDuration, wasSuccessful));
             }
             else
             {
@@ -197,13 +216,16 @@ namespace Julio.Core
             }
         }
 
-        private IEnumerator ResultRoutine(GameObject resultObject, bool wasSuccessful)
+        private IEnumerator ResultRoutine(GameObject prefab, Vector3 position, float duration, bool wasSuccessful)
         {
-            Instantiate(resultObject, gameObject.scene);
+            if (prefab != null)
+            {
+                Instantiate(prefab, position, Quaternion.identity, gameObject.transform);
+            }
             
             PlayOptionalMusic(wasSuccessful ? winAudio : loseAudio);
             
-            yield return new WaitForSeconds(resultDuration);
+            yield return new WaitForSeconds(duration);
             
             FinalizeMinigame(wasSuccessful);
         }
