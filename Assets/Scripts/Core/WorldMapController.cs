@@ -26,6 +26,7 @@ namespace Julio.Core
 
         [Header("Minigame Settings")]
         [SerializeField] private List<string> minigameSceneNames;
+        [SerializeField] private GameObject blurCamera;
         [SerializeField] private GameObject blurOverlay;
         
         [Header("UI - Lives")]
@@ -93,6 +94,7 @@ namespace Julio.Core
 
         private IEnumerator LoadMinigameAdditive(string sceneName)
         {
+            if (blurCamera != null) blurCamera.SetActive(true);
             if (blurOverlay != null) blurOverlay.SetActive(true);
             if (shipVisual != null) shipVisual.SetActive(false);
 
@@ -124,6 +126,7 @@ namespace Julio.Core
             
             if (shipVisual != null) shipVisual.SetActive(true);
             if (blurOverlay != null) blurOverlay.SetActive(false);
+            if (blurCamera != null) blurCamera.SetActive(false);
             onMinigameUnload?.Invoke();
 
         }
