@@ -16,10 +16,14 @@ namespace Julio.Core
         [SerializeField] private List<Transform> nodePoints;
         [SerializeField] private float travelDuration = 3.0f;
         [SerializeField] private float waitAfterArrival = 1.0f;
+        [SerializeField] private float waitAfterMinigame = 1.0f;
 
         [Header("Minigame Settings")]
         [SerializeField] private List<string> minigameSceneNames;
         [SerializeField] private GameObject blurOverlay;
+        
+        [Header("UI - Lives")]
+        [SerializeField] private List<GameObject> heartIcons;
 
         private int _lastNodeIndex = -1;
         private string _lastMinigameScene;
@@ -32,6 +36,11 @@ namespace Julio.Core
                 shipTransform.position = nodePoints[0].position;
                 _lastNodeIndex = 0;
             } 
+            
+            if (GameManager.Instance != null)
+            {
+                UpdateHeartsUI(GameManager.Instance.CurrentLives);
+            }
             
             StartCoroutine(MapLoopRoutine());
         }
@@ -54,6 +63,7 @@ namespace Julio.Core
 
                 // 3. Wait until minigame finishes (GameManager will notify us)
                 yield return new WaitUntil(() => _currentLoadedScene == null);
+                yield return new WaitForSeconds(waitAfterMinigame);
             }
         }
 
@@ -126,6 +136,34 @@ namespace Julio.Core
             }
             
             return scene;
+        }
+        
+        public void UpdateHeartsUI(int currentLives)
+        {
+            for (int i = 0; i < heartIcons.Count; i++)
+            {
+                if (heartIcons[i] != null)
+                {
+                    if (i == currentLives) 
+                    {
+                        OnLifeLostVisuals(heartIcons[i]);
+                    }
+                    
+                    heartIcons[i].SetActive(i < currentLives);
+                }
+            }
+        }
+        
+        /// <summary>
+        /// Triggered whenever a heart is lost. 
+        /// Use this to play animations, shakes, or particle effects.
+        /// </summary>
+        private void OnLifeLostVisuals(GameObject heartObject)
+        {
+            Debug.Log($"Life lost! Triggering feedback for: {heartObject.name}");
+    
+            // FUTURE: Add camera shake here: Camera.main.GetComponent<ScreenShake>().Shake();
+            // FUTURE: heartObject.GetComponent<Animation>().Play("HeartBreak");
         }
     }
 }
