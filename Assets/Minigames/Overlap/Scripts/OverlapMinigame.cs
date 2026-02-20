@@ -6,8 +6,7 @@ namespace Julio.Minigames.Overlap
     public class OverlapMinigame : MonoBehaviour
     {
         [Header("Interpolated Item")]
-        [SerializeField]
-        private InterpolatedItem interpolatedItem;
+        [SerializeField] private InterpolatedItem interpolatedItem;
 
         [SerializeField] private Transform pointA;
         [SerializeField] private Transform pointB;
@@ -36,8 +35,15 @@ namespace Julio.Minigames.Overlap
         private float interpolationTimer;
         private bool isRunning = false;
         private GameObject _currentCountdownObject = null; // Track what's currently shown
+        
+        private OverlapController _controller;
 
-        private void Start()
+        private void Awake()
+        {
+            _controller = Object.FindAnyObjectByType<OverlapController>();
+        }
+
+        private void OnEnable()
         {
             StartMinigame();
         }
@@ -126,6 +132,8 @@ namespace Julio.Minigames.Overlap
 
             hasSucceeded = interpolatedItem.isOverlapping;
             Debug.Log($"[OverlapMinigame] Result: {(hasSucceeded ? "SUCCESS" : "FAIL")}");
+            
+            _controller.EndMinigame(hasSucceeded);
         }
 
         private void OnDrawGizmosSelected()

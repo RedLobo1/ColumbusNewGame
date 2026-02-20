@@ -111,9 +111,6 @@ namespace Julio.Core
                 timeProgressBar.gameObject.SetActive(false);
                 timeProgressBar.value = 1.0f;
             }
-            
-            if (winPrefab != null) winPrefab.SetActive(false);
-            if (losePrefab != null) losePrefab.SetActive(false);
         }
 
         /// <summary>
@@ -202,7 +199,8 @@ namespace Julio.Core
 
         private IEnumerator ResultRoutine(GameObject resultObject, bool wasSuccessful)
         {
-            resultObject.SetActive(true);
+            Instantiate(resultObject, gameObject.scene);
+            
             PlayOptionalMusic(wasSuccessful ? winAudio : loseAudio);
             
             yield return new WaitForSeconds(resultDuration);
