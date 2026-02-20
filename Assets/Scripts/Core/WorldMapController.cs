@@ -183,12 +183,12 @@ namespace Julio.Core
         private string GetRandomMinigameScene()
         {
             string scene = _lastMinigameScene;
-
+            //string scene = minigameSceneNames[0];
             while (scene == _lastMinigameScene && minigameSceneNames.Count > 1)
             {
                 scene = minigameSceneNames[Random.Range(0, minigameSceneNames.Count)];
             }
-            
+
             return scene;
         }
         

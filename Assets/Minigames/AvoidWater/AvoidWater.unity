@@ -1575,10 +1575,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4048034746874744602, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 1143821300}
     - target: {fileID: 7797553306704400954, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
       propertyPath: m_Name
       value: PF_InstructionCanvas
@@ -2362,21 +2358,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2265005751093286883, guid: 24b4f9c7ef0fcae44bc20beacc5d676f, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1824.547
+    - target: {fileID: 1755334611144998479, guid: 24b4f9c7ef0fcae44bc20beacc5d676f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2265005751093286883, guid: 24b4f9c7ef0fcae44bc20beacc5d676f, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 89.6196
+    - target: {fileID: 1755334611144998479, guid: 24b4f9c7ef0fcae44bc20beacc5d676f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2265005751093286883, guid: 24b4f9c7ef0fcae44bc20beacc5d676f, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.000010967
-      objectReference: {fileID: 0}
-    - target: {fileID: 2265005751093286883, guid: 24b4f9c7ef0fcae44bc20beacc5d676f, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -424
+    - target: {fileID: 1755334611144998479, guid: 24b4f9c7ef0fcae44bc20beacc5d676f, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2673632519545061242, guid: 24b4f9c7ef0fcae44bc20beacc5d676f, type: 3}
       propertyPath: m_Pivot.x
@@ -2458,21 +2450,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2895116995370580505, guid: 24b4f9c7ef0fcae44bc20beacc5d676f, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 1143821300}
-    - target: {fileID: 2895116995370580505, guid: 24b4f9c7ef0fcae44bc20beacc5d676f, type: 3}
-      propertyPath: m_RenderMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2895116995370580505, guid: 24b4f9c7ef0fcae44bc20beacc5d676f, type: 3}
-      propertyPath: m_SortingOrder
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 4170152341681578316, guid: 24b4f9c7ef0fcae44bc20beacc5d676f, type: 3}
       propertyPath: m_Name
       value: PF_TimerCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7898053753110533687, guid: 24b4f9c7ef0fcae44bc20beacc5d676f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7898053753110533687, guid: 24b4f9c7ef0fcae44bc20beacc5d676f, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3367,7 +3351,6 @@ MonoBehaviour:
   instructionCanvas: {fileID: 592447445}
   instructionDisplayText: {fileID: 801514309}
   instructionText: Avoid!
-  instructionColor: {r: 1, g: 1, b: 1, a: 1}
   instructionAnimName: PLACEHOLDER_InstructionText
   timeProgressBar: {fileID: 240579868}
   winDuration: 2

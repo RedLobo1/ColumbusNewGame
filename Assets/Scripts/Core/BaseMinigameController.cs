@@ -26,7 +26,7 @@ namespace Julio.Core
         [SerializeField] private GameObject instructionCanvas;
         [SerializeField] private TextMeshProUGUI instructionDisplayText; 
         [SerializeField] private string instructionText = "DO SOMETHING!";
-        [SerializeField] private Color instructionColor = Color.white;
+        //[SerializeField] private Color instructionColor = Color.white;
         [SerializeField] private string instructionAnimName = "InstructionShow";
         [SerializeField] private Slider timeProgressBar;
 
@@ -118,7 +118,7 @@ namespace Julio.Core
         {
             if (instructionCanvas != null) instructionCanvas.SetActive(true);
             if (instructionDisplayText != null) instructionDisplayText.text = instructionText;
-            if (instructionDisplayText != null) instructionDisplayText.color = instructionColor;
+            //if (instructionDisplayText != null) instructionDisplayText.color = instructionColor;
             if (minigameContainer != null) minigameContainer.SetActive(false);
             if (timeProgressBar != null)
             {
