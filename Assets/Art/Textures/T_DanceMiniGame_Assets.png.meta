@@ -1,0 +1,505 @@
+fileFormatVersion: 2
+guid: 8d350aefb253b13408d80eef3418f215
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1995155818120291015
+    second: T_DanceMiniGame_Assets_0
+  - first:
+      213: -2887255104091681972
+    second: T_DanceMiniGame_Assets_1
+  - first:
+      213: 572593857181620226
+    second: T_DanceMiniGame_Assets_2
+  - first:
+      213: 124974384717782362
+    second: T_DanceMiniGame_Assets_3
+  - first:
+      213: -3916058679428922836
+    second: T_DanceMiniGame_Assets_4
+  - first:
+      213: -6068296286387128174
+    second: T_DanceMiniGame_Assets_5
+  - first:
+      213: -4690107177136604182
+    second: T_DanceMiniGame_Assets_6
+  - first:
+      213: -1854732711291521514
+    second: T_DanceMiniGame_Assets_7
+  - first:
+      213: 1057277619157195057
+    second: T_DanceMiniGame_Assets_8
+  - first:
+      213: 7546054623867704630
+    second: T_DanceMiniGame_Assets_9
+  - first:
+      213: -1823786224420951877
+    second: T_DanceMiniGame_Assets_10
+  - first:
+      213: 6491731236138738897
+    second: T_DanceMiniGame_Assets_11
+  - first:
+      213: -7820313946313396026
+    second: T_DanceMiniGame_Assets_12
+  - first:
+      213: -1562110426875322104
+    second: T_DanceMiniGame_Assets_13
+  - first:
+      213: -5535110093772311048
+    second: T_DanceMiniGame_Assets_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: T_DanceMiniGame_Assets_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 72
+        width: 364
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c22d9255a730bb10800000000000000
+      internalID: 1995155818120291015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_DanceMiniGame_Assets_1
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 70
+        width: 331
+        height: 650
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4b8ea8b7c86ee7d0800000000000000
+      internalID: -2887255104091681972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_DanceMiniGame_Assets_2
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 58
+        width: 506
+        height: 628
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20891e1541342f700800000000000000
+      internalID: 572593857181620226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_DanceMiniGame_Assets_3
+      rect:
+        serializedVersion: 2
+        x: 1495
+        y: 54
+        width: 304
+        height: 650
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5d502f6a8ffbb100800000000000000
+      internalID: 124974384717782362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_DanceMiniGame_Assets_4
+      rect:
+        serializedVersion: 2
+        x: 1904
+        y: 64
+        width: 347
+        height: 641
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c22cd05116d57a9c0800000000000000
+      internalID: -3916058679428922836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_DanceMiniGame_Assets_5
+      rect:
+        serializedVersion: 2
+        x: 2314
+        y: 61
+        width: 343
+        height: 641
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 298b212cda419cba0800000000000000
+      internalID: -6068296286387128174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_DanceMiniGame_Assets_6
+      rect:
+        serializedVersion: 2
+        x: 2771
+        y: 61
+        width: 343
+        height: 641
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aeb33442f5469eeb0800000000000000
+      internalID: -4690107177136604182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_DanceMiniGame_Assets_7
+      rect:
+        serializedVersion: 2
+        x: 3177
+        y: 64
+        width: 347
+        height: 641
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 616fb260d6aa246e0800000000000000
+      internalID: -1854732711291521514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_DanceMiniGame_Assets_8
+      rect:
+        serializedVersion: 2
+        x: 3629
+        y: 54
+        width: 304
+        height: 650
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 139d5d694643cae00800000000000000
+      internalID: 1057277619157195057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_DanceMiniGame_Assets_9
+      rect:
+        serializedVersion: 2
+        x: 4003
+        y: 58
+        width: 506
+        height: 628
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 635145f13b8f8b860800000000000000
+      internalID: 7546054623867704630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_DanceMiniGame_Assets_10
+      rect:
+        serializedVersion: 2
+        x: 4603
+        y: 46
+        width: 256
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb8632b771c90b6e0800000000000000
+      internalID: -1823786224420951877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_DanceMiniGame_Assets_11
+      rect:
+        serializedVersion: 2
+        x: 4926
+        y: 38
+        width: 238
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d46b532a23471a50800000000000000
+      internalID: 6491731236138738897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_DanceMiniGame_Assets_12
+      rect:
+        serializedVersion: 2
+        x: 5253
+        y: 35
+        width: 274
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c0f4fd46e9a87390800000000000000
+      internalID: -7820313946313396026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_DanceMiniGame_Assets_13
+      rect:
+        serializedVersion: 2
+        x: 5568
+        y: 28
+        width: 236
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 801a92ad7d4425ae0800000000000000
+      internalID: -1562110426875322104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_DanceMiniGame_Assets_14
+      rect:
+        serializedVersion: 2
+        x: 5861
+        y: 44
+        width: 342
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f5b50c22b65f23b0800000000000000
+      internalID: -5535110093772311048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
