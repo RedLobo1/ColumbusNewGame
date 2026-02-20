@@ -64,5 +64,14 @@ namespace Julio.Core
                 controller.UnloadMinigame();
             }
         }
+        
+        public void SetMinigameUIOrder(bool show)
+        {
+            WorldMapController map = Object.FindAnyObjectByType<WorldMapController>();
+            if (map != null)
+            {
+                map.SetMinigameFrameVisibility(show);
+            }
+        }
     }
 }

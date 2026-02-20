@@ -36,6 +36,9 @@ namespace Julio.Core
         
         [Header("UI - Lives")]
         [SerializeField] private List<GameObject> heartIcons;
+        
+        [Header("UI - Render Texture")]
+        [SerializeField] private Canvas minigameFrameCanvas;
 
         private int _lastNodeIndex = -1;
         private string _lastMinigameScene;
@@ -219,6 +222,18 @@ namespace Julio.Core
                 yield return null;
             }
             blurMaterial.SetFloat("_Size", targetSize);
+        }
+        
+        /// <summary>
+        /// Changes the sorting order of the Minigame Frame Canvas.
+        /// </summary>
+        public void SetMinigameFrameVisibility(bool visible)
+        {
+            if (minigameFrameCanvas != null)
+            {
+                // 11 when visible, -11 when hidden
+                minigameFrameCanvas.sortingOrder = visible ? 11 : -11;
+            }
         }
     }
 }

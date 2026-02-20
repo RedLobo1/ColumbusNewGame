@@ -145,6 +145,8 @@ namespace Julio.Core
             PlayOptionalMusic(gameplayMusic);
 
             // Transition to active gamepley
+            if (GameManager.Instance != null)
+                GameManager.Instance.SetMinigameUIOrder(true);
             if (instructionCanvas != null) instructionCanvas.SetActive(false);
             if (minigameContainer != null) minigameContainer.SetActive(true);
             if (timeProgressBar != null) timeProgressBar.gameObject.SetActive(true);
@@ -235,6 +237,7 @@ namespace Julio.Core
             if (GameManager.Instance != null)
             {
                 GameManager.Instance.OnMinigameEnd(wasSuccessful);
+                GameManager.Instance.SetMinigameUIOrder(false);
             }
         }
 

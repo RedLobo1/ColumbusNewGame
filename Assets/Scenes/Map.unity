@@ -175,6 +175,7 @@ MonoBehaviour:
   - {fileID: 1427504965}
   - {fileID: 1604441357}
   - {fileID: 1086998017}
+  minigameFrameCanvas: {fileID: 1421527735}
   onMinigameLoad:
     m_PersistentCalls:
       m_Calls:
@@ -1632,7 +1633,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 11
+  m_SortingOrder: -11
   m_TargetDisplay: 0
 --- !u!224 &1421527736
 RectTransform:
@@ -2322,7 +2323,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 23
+    m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: 78e7c5d3a477fa743814a09692fc2c47, type: 2}
   m_TargetDisplay: 0
