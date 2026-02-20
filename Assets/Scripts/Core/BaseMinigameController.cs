@@ -76,6 +76,8 @@ namespace Julio.Core
             else if (minigameTargetTexture != null)
             {
                 MinigameCamera.targetTexture = minigameTargetTexture;
+                MinigameCamera.clearFlags = CameraClearFlags.SolidColor;
+                MinigameCamera.backgroundColor = Color.black;
             }
         }
 
