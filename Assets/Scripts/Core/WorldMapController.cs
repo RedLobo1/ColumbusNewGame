@@ -12,6 +12,7 @@ namespace Julio.Core
     {
         [Header("Movement Settings")] 
         [SerializeField] private Transform shipTransform;
+        [SerializeField] private GameObject shipVisual;   
         [SerializeField] private List<Transform> nodePoints;
         [SerializeField] private float travelDuration = 3.0f;
 
@@ -72,6 +73,7 @@ namespace Julio.Core
         private IEnumerator LoadMinigameAdditive(string sceneName)
         {
             if (blurOverlay != null) blurOverlay.SetActive(true);
+            if (shipVisual != null) shipVisual.SetActive(false);
 
             AsyncOperation loadOp = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
             while (!loadOp.isDone) yield return null;
@@ -96,6 +98,8 @@ namespace Julio.Core
             while (!unloadOp.isDone) yield return null;
             
             _currentLoadedScene = null;
+            
+            if (shipVisual != null) shipVisual.SetActive(true);
             if (blurOverlay != null) blurOverlay.SetActive(false);
         }
 
@@ -114,10 +118,11 @@ namespace Julio.Core
         {
             string scene = _lastMinigameScene;
 
-            while (scene == _lastMinigameScene && minigameSceneNames.Count > 1)
-            {
-                scene = minigameSceneNames[Random.Range(0, minigameSceneNames.Count)];
-            }
+            scene = minigameSceneNames[4];
+            // while (scene == _lastMinigameScene && minigameSceneNames.Count > 1)
+            // {
+            //     scene = minigameSceneNames[Random.Range(0, minigameSceneNames.Count)];
+            // }
             
             return scene;
         }

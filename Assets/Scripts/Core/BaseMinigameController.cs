@@ -13,49 +13,40 @@ namespace Julio.Core
     public abstract class BaseMinigameController : MonoBehaviour
     {
         [Header("Base Settings")]
+        [SerializeField] private GameObject minigameContainer;
         [SerializeField] protected float gameDuration = 5f;
+        [SerializeField] private bool keepContainerActiveOnEnd = true;
+        
+        [Header("Render Texture Settings")]
+        [SerializeField] private RenderTexture minigameTargetTexture;
+        public Camera MinigameCamera;
+        
+        [Header("Instruction Settings")]
         [SerializeField] protected float instructionDuration = 1.5f;
+        [SerializeField] private GameObject instructionCanvas;
+        [SerializeField] private TextMeshProUGUI instructionDisplayText; 
+        [SerializeField] private string instructionText = "DO SOMETHING!";
+        [SerializeField] private Color instructionColor = Color.white;
+        [SerializeField] private string instructionAnimName = "InstructionShow";
+        [SerializeField] private Slider timeProgressBar;
 
-        [Header("Result Logic")]
-        [SerializeField] private bool useWinResultState = true;
-        [SerializeField] private bool useLoseResultState = true;
-        [SerializeField] private float resultDuration = 1.5f;
-
-        [Header("Result UI References")]
-        [SerializeField] private GameObject resultCanvas;
-        [SerializeField] private Image resultImage;
-        [SerializeField] private Sprite winSprite;
-        [SerializeField] private Sprite loseSprite;
+        [Header("Result Settings")]
+        [SerializeField] private float resultDuration = 1.5f; 
+        [SerializeField] private GameObject winPrefab;
+        [SerializeField] private GameObject losePrefab;
 
         [Header("Audio Settings")]
         [SerializeField] private AudioClip instructionMusic;
         [SerializeField] private AudioClip gameplayMusic;
         [SerializeField] private AudioClip winAudio;
         [SerializeField] private AudioClip loseAudio;
-
-        [Header("Base UI References")]
-        [SerializeField] private Slider timeProgressBar;
-        [SerializeField] private GameObject instructionCanvas;
-        [SerializeField] private Image instructionImage;
-
-        [Header("Base Content References")]
-        [SerializeField] private GameObject minigameContainer;
-        [SerializeField] private Sprite instructionSprite;
         
-        [Header( "Animation Settings")]
-        [SerializeField] private string instructionAnimName = "InstructionShow";
-        [SerializeField] private string backgroundAnimName = "BackgroundFade";
-        [SerializeField] private string resultAnimName = "ResultShow";
-        
-        public Camera MinigameCamera;
-
         protected float _timeLeft;
         protected bool _isGameActive;
         
         private AudioSource _audioSource;
         private Animation _instructionAnim;
         private Animation _backgroundAnim;
-        private Animation _resultAnim;
 
         private void Awake()
         {
@@ -70,6 +61,12 @@ namespace Julio.Core
             {
                 Debug.LogWarning($"No camera found in the minigame scene: {gameObject.scene.name}");
             }
+            else if (minigameTargetTexture != null)
+            {
+                MinigameCamera.targetTexture = minigameTargetTexture;
+                MinigameCamera.clearFlags = CameraClearFlags.SolidColor;
+                MinigameCamera.backgroundColor = Color.black;
+            }
         }
 
         protected virtual void Start()
@@ -77,8 +74,7 @@ namespace Julio.Core
             _timeLeft = gameDuration;
             
             _backgroundAnim = instructionCanvas?.GetComponent<Animation>();
-            _instructionAnim = instructionImage?.GetComponent<Animation>();
-            _resultAnim = resultImage?.GetComponent<Animation>();
+            _instructionAnim = instructionDisplayText?.GetComponent<Animation>();
             
             SetupInitialState();
             StartCoroutine(MinigameRoutine());
@@ -107,8 +103,8 @@ namespace Julio.Core
         private void SetupInitialState()
         {
             if (instructionCanvas != null) instructionCanvas.SetActive(true);
-            if (resultCanvas != null) resultCanvas.SetActive(false);
-            if (instructionImage != null) instructionImage.sprite = instructionSprite;
+            if (instructionDisplayText != null) instructionDisplayText.text = instructionText;
+            if (instructionDisplayText != null) instructionDisplayText.color = instructionColor;
             if (minigameContainer != null) minigameContainer.SetActive(false);
             if (timeProgressBar != null)
             {
@@ -123,11 +119,6 @@ namespace Julio.Core
         private IEnumerator MinigameRoutine()
         {
             PlayOptionalMusic(instructionMusic);
-            
-            if (_backgroundAnim != null && _backgroundAnim.GetClip(backgroundAnimName) != null)
-            {
-                _backgroundAnim.Play(backgroundAnimName);
-            }
             
             if (_instructionAnim != null && _instructionAnim.GetClip(instructionAnimName) != null)
             {
@@ -188,13 +179,17 @@ namespace Julio.Core
             
             if (_audioSource != null) _audioSource.Stop();
             if (timeProgressBar != null) timeProgressBar.gameObject.SetActive(false);
-            if (minigameContainer != null) minigameContainer.SetActive(false);
             
-            bool shouldShowResult = (wasSuccessful && useWinResultState) || (!wasSuccessful && useLoseResultState);
-
-            if (shouldShowResult)
+            if (minigameContainer != null && !keepContainerActiveOnEnd) 
             {
-                StartCoroutine(ResultRoutine(wasSuccessful));
+                minigameContainer.SetActive(false);
+            }
+            
+            GameObject targetResult = wasSuccessful ? winPrefab : losePrefab;
+
+            if (targetResult != null)
+            {
+                StartCoroutine(ResultRoutine(targetResult, wasSuccessful));
             }
             else
             {
@@ -202,14 +197,10 @@ namespace Julio.Core
             }
         }
 
-        private IEnumerator ResultRoutine(bool wasSuccessful)
+        private IEnumerator ResultRoutine(GameObject resultObject, bool wasSuccessful)
         {
-            if (resultCanvas != null) resultCanvas.SetActive(true);
-            resultImage.sprite = wasSuccessful ? winSprite : loseSprite;
-            if (_resultAnim != null && _resultAnim.GetClip(resultAnimName) != null)
-            {
-                _resultAnim.Play(resultAnimName);
-            }
+            Instantiate(resultObject, gameObject.scene);
+            
             PlayOptionalMusic(wasSuccessful ? winAudio : loseAudio);
             
             yield return new WaitForSeconds(resultDuration);

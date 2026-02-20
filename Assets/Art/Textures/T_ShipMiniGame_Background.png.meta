@@ -1,0 +1,358 @@
+fileFormatVersion: 2
+guid: b69a402cd6af1544f9b6cd34cd4d1832
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -536667761319796691
+    second: T_ShipMiniGame_Background_0
+  - first:
+      213: -2092439784163646952
+    second: T_ShipMiniGame_Background_1
+  - first:
+      213: 4277713995957488040
+    second: T_ShipMiniGame_Background_2
+  - first:
+      213: 3490179168862834805
+    second: T_ShipMiniGame_Background_3
+  - first:
+      213: 4952242686190460954
+    second: T_ShipMiniGame_Background_4
+  - first:
+      213: 4906726300511618662
+    second: T_ShipMiniGame_Background_5
+  - first:
+      213: -8750646873047851128
+    second: T_ShipMiniGame_Background_6
+  - first:
+      213: -5470881667950194901
+    second: T_ShipMiniGame_Background_7
+  - first:
+      213: 5000613300009517284
+    second: T_ShipMiniGame_Background_8
+  - first:
+      213: 2432923974072750883
+    second: T_ShipMiniGame_Background_9
+  - first:
+      213: 1636155324163119673
+    second: T_ShipMiniGame_Background_10
+  - first:
+      213: -2013801431626361555
+    second: T_ShipMiniGame_Background_11
+  - first:
+      213: 4014196698069207280
+    second: T_ShipMiniGame_Background_12
+  - first:
+      213: -2551039424847432311
+    second: T_ShipMiniGame_Background_13
+  - first:
+      213: -6000073431204751040
+    second: T_ShipMiniGame_Background_14
+  - first:
+      213: -4466918597464844632
+    second: T_ShipMiniGame_Background_15
+  - first:
+      213: -4920456224393488475
+    second: T_ShipMiniGame_Background_16
+  - first:
+      213: 7247893260494587124
+    second: T_ShipMiniGame_Background_17
+  - first:
+      213: -5570620248895404442
+    second: T_ShipMiniGame_Background_18
+  - first:
+      213: 7199134040656457348
+    second: T_ShipMiniGame_Background_19
+  - first:
+      213: 3698237688812068427
+    second: T_ShipMiniGame_Background_20
+  - first:
+      213: -8014111995245658982
+    second: T_ShipMiniGame_Background_21
+  - first:
+      213: -2681375996049848764
+    second: T_ShipMiniGame_Background_22
+  - first:
+      213: 8964632538170317256
+    second: T_ShipMiniGame_Background_23
+  - first:
+      213: 1450454608248461069
+    second: T_ShipMiniGame_Background_24
+  - first:
+      213: -6987796637801913267
+    second: T_ShipMiniGame_Background_25
+  - first:
+      213: 6723687404446935348
+    second: T_ShipMiniGame_Background_26
+  - first:
+      213: 2757656089569595726
+    second: T_ShipMiniGame_Background_27
+  - first:
+      213: 5211818705685703238
+    second: T_ShipMiniGame_Background_28
+  - first:
+      213: 2916832540326798421
+    second: T_ShipMiniGame_Background_29
+  - first:
+      213: -6083794953933807731
+    second: T_ShipMiniGame_Background_30
+  - first:
+      213: 334880440915328477
+    second: T_ShipMiniGame_Background_31
+  - first:
+      213: -5163538618305607404
+    second: T_ShipMiniGame_Background_32
+  - first:
+      213: -6757688044096997958
+    second: T_ShipMiniGame_Background_33
+  - first:
+      213: -4909610709206055599
+    second: T_ShipMiniGame_Background_34
+  - first:
+      213: 8256426819096037748
+    second: T_ShipMiniGame_Background_35
+  - first:
+      213: -8936728153841118581
+    second: T_ShipMiniGame_Background_36
+  - first:
+      213: 4588432963044932110
+    second: T_ShipMiniGame_Background_37
+  - first:
+      213: 5723267660331974920
+    second: T_ShipMiniGame_Background_38
+  - first:
+      213: -3588064225698416985
+    second: T_ShipMiniGame_Background_39
+  - first:
+      213: 6034536437600694702
+    second: T_ShipMiniGame_Background_40
+  - first:
+      213: -8359968389266177122
+    second: T_ShipMiniGame_Background_41
+  - first:
+      213: -4852393482035088509
+    second: T_ShipMiniGame_Background_42
+  - first:
+      213: 5994219077792579484
+    second: T_ShipMiniGame_Background_43
+  - first:
+      213: 5130942413047077471
+    second: T_ShipMiniGame_Background_44
+  - first:
+      213: -8909717321876109125
+    second: T_ShipMiniGame_Background_45
+  - first:
+      213: 711897850225186038
+    second: T_ShipMiniGame_Background_46
+  - first:
+      213: 8271011525991711924
+    second: T_ShipMiniGame_Background_47
+  - first:
+      213: 1814059767712784278
+    second: T_ShipMiniGame_Background_48
+  - first:
+      213: 9097609418898186464
+    second: T_ShipMiniGame_Background_49
+  - first:
+      213: -8600532441713546374
+    second: T_ShipMiniGame_Background_50
+  - first:
+      213: -3784051038743118480
+    second: T_ShipMiniGame_Background_51
+  - first:
+      213: -1845469331906367959
+    second: T_ShipMiniGame_Background_52
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2209
+        width: 4000
+        height: 987
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d202124b38f5d88f0800000000000000
+      internalID: -536667761319796691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1087
+        width: 4000
+        height: 1073
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf43974e66ff12f4881a816984ac7273
+      internalID: -2092439784163646952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_ShipMiniGame_Background_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 4000
+        height: 1048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a981e397f7d428c409d5469e881e8bc4
+      internalID: 4277713995957488040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: f8b5853279f7be849b1730f65b17d036
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      T_ShipMiniGame_Background_0: -536667761319796691
+      T_ShipMiniGame_Background_1: -2092439784163646952
+      T_ShipMiniGame_Background_2: 4277713995957488040
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
