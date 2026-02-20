@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 namespace Julio.Core
 {
@@ -28,6 +29,9 @@ namespace Julio.Core
         private int _lastNodeIndex = -1;
         private string _lastMinigameScene;
         private string _currentLoadedScene;
+
+        [SerializeField] UnityEvent onMinigameLoad;
+        [SerializeField] UnityEvent onMinigameUnload;
 
         private void Start()
         {
@@ -91,6 +95,8 @@ namespace Julio.Core
             while (!loadOp.isDone) yield return null;
             
             _currentLoadedScene = sceneName;
+            onMinigameLoad?.Invoke();
+            
         }
 
         /// <summary>
@@ -113,6 +119,8 @@ namespace Julio.Core
             
             if (shipVisual != null) shipVisual.SetActive(true);
             if (blurOverlay != null) blurOverlay.SetActive(false);
+            onMinigameUnload?.Invoke();
+
         }
 
         private int GetRandomNodeIndex()
