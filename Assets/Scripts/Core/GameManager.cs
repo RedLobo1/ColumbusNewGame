@@ -12,7 +12,7 @@ namespace Julio.Core
         [Header("Player Stats")]
         [SerializeField] private int maxLives = 3;
         private int _currentLives;
-        [SerializeField] private int successfulGames = 0;
+        [SerializeField] public int successfulGames = 0;
         
         [Header("Difficulty")]
         public float globalSpeedMultiplier = 1f;
@@ -62,6 +62,15 @@ namespace Julio.Core
             if (controller != null)
             {
                 controller.UnloadMinigame();
+            }
+        }
+        
+        public void SetMinigameUIOrder(bool show)
+        {
+            WorldMapController map = Object.FindAnyObjectByType<WorldMapController>();
+            if (map != null)
+            {
+                map.SetMinigameFrameVisibility(show);
             }
         }
     }

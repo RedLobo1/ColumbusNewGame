@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 namespace Julio.Core
 {
@@ -15,19 +16,37 @@ namespace Julio.Core
         [SerializeField] private GameObject shipVisual;   
         [SerializeField] private List<Transform> nodePoints;
         [SerializeField] private float travelDuration = 3.0f;
+        [SerializeField] private float adjustedTravelDuration
+        {
+            get { return this.travelDuration / (1 + GameManager.Instance.successfulGames * 0.2f); }
+        }
+
         [SerializeField] private float waitAfterArrival = 1.0f;
         [SerializeField] private float waitAfterMinigame = 1.0f;
 
         [Header("Minigame Settings")]
         [SerializeField] private List<string> minigameSceneNames;
+        
+        [Header("Blur Settings")]
+        [SerializeField] private GameObject blurCamera;
         [SerializeField] private GameObject blurOverlay;
+        [SerializeField] private Material blurMaterial;
+        [SerializeField] private float blurTransitionDuration = 0.5f;
+        [SerializeField] private float maxBlurSize = 3.0f;
         
         [Header("UI - Lives")]
         [SerializeField] private List<GameObject> heartIcons;
+        
+        [Header("UI - Render Texture")]
+        [SerializeField] private Canvas minigameFrameCanvas;
 
         private int _lastNodeIndex = -1;
         private string _lastMinigameScene;
         private string _currentLoadedScene;
+        private Coroutine _blurCoroutine;
+
+        [SerializeField] UnityEvent onMinigameLoad;
+        [SerializeField] UnityEvent onMinigameUnload;
 
         private void Start()
         {
@@ -72,10 +91,10 @@ namespace Julio.Core
             float elapsed = 0;
             Vector3 startPos = shipTransform.position;
 
-            while (elapsed < travelDuration)
+            while (elapsed < adjustedTravelDuration)
             {
                 elapsed += Time.deltaTime;
-                shipTransform.position = Vector3.Lerp(startPos, targetPosition, elapsed / travelDuration);
+                shipTransform.position = Vector3.Lerp(startPos, targetPosition, elapsed / adjustedTravelDuration);
                 yield return null;
             }
             
@@ -84,6 +103,13 @@ namespace Julio.Core
 
         private IEnumerator LoadMinigameAdditive(string sceneName)
         {
+            if (blurMaterial != null)
+            {
+                if (_blurCoroutine != null) StopCoroutine(_blurCoroutine);
+                _blurCoroutine = StartCoroutine(FadeBlur(maxBlurSize));
+            }
+            
+            if (blurCamera != null) blurCamera.SetActive(true);
             if (blurOverlay != null) blurOverlay.SetActive(true);
             if (shipVisual != null) shipVisual.SetActive(false);
 
@@ -91,6 +117,8 @@ namespace Julio.Core
             while (!loadOp.isDone) yield return null;
             
             _currentLoadedScene = sceneName;
+            onMinigameLoad?.Invoke();
+            
         }
 
         /// <summary>
@@ -111,8 +139,20 @@ namespace Julio.Core
             
             _currentLoadedScene = null;
             
+            // Start blur transition back to 0
+            if (blurMaterial != null)
+            {
+                if (_blurCoroutine != null) StopCoroutine(_blurCoroutine);
+                _blurCoroutine = StartCoroutine(FadeBlur(0f));
+            }
+            
+            yield return new WaitForSeconds(blurTransitionDuration);
+            
             if (shipVisual != null) shipVisual.SetActive(true);
             if (blurOverlay != null) blurOverlay.SetActive(false);
+            if (blurCamera != null) blurCamera.SetActive(false);
+            onMinigameUnload?.Invoke();
+
         }
 
         private int GetRandomNodeIndex()
@@ -164,6 +204,36 @@ namespace Julio.Core
     
             // FUTURE: Add camera shake here: Camera.main.GetComponent<ScreenShake>().Shake();
             // FUTURE: heartObject.GetComponent<Animation>().Play("HeartBreak");
+        }
+        
+        /// <summary>
+        /// Smoothly transitions the blur size over time.
+        /// </summary>
+        private IEnumerator FadeBlur(float targetSize)
+        {
+            float startSize = blurMaterial.GetFloat("_Size");
+            float elapsed = 0;
+
+            while (elapsed < blurTransitionDuration)
+            {
+                elapsed += Time.deltaTime;
+                float currentSize = Mathf.Lerp(startSize, targetSize, elapsed / blurTransitionDuration);
+                blurMaterial.SetFloat("_Size", currentSize);
+                yield return null;
+            }
+            blurMaterial.SetFloat("_Size", targetSize);
+        }
+        
+        /// <summary>
+        /// Changes the sorting order of the Minigame Frame Canvas.
+        /// </summary>
+        public void SetMinigameFrameVisibility(bool visible)
+        {
+            if (minigameFrameCanvas != null)
+            {
+                // 11 when visible, -11 when hidden
+                minigameFrameCanvas.sortingOrder = visible ? 11 : -11;
+            }
         }
     }
 }
