@@ -16,6 +16,8 @@ namespace Julio.Minigames.AvoidWater
         private int _currentLane = 1;
         private AvoidWaterController _controller;
         private SpriteRenderer _spriteRenderer;
+        [SerializeField] private AudioSource move;
+
 
         private void Awake()
         {
@@ -52,6 +54,7 @@ namespace Julio.Minigames.AvoidWater
                 {
                     _currentLane++;
                     UpdateSortingOrder();
+                    
                 }
             }
 
@@ -76,6 +79,7 @@ namespace Julio.Minigames.AvoidWater
                 // Lane 1 (middle) -> Order 2
                 // Lane 2 (top)    -> Order 1
                 _spriteRenderer.sortingOrder = baseSortingOrder + (_controller.lanes.Length - 1 - _currentLane);
+                move.Play();
             }
         }
 
