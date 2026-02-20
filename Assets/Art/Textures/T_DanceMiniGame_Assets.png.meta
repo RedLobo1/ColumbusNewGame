@@ -497,7 +497,22 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      T_DanceMiniGame_Assets_0: 1995155818120291015
+      T_DanceMiniGame_Assets_1: -2887255104091681972
+      T_DanceMiniGame_Assets_10: -1823786224420951877
+      T_DanceMiniGame_Assets_11: 6491731236138738897
+      T_DanceMiniGame_Assets_12: -7820313946313396026
+      T_DanceMiniGame_Assets_13: -1562110426875322104
+      T_DanceMiniGame_Assets_14: -5535110093772311048
+      T_DanceMiniGame_Assets_2: 572593857181620226
+      T_DanceMiniGame_Assets_3: 124974384717782362
+      T_DanceMiniGame_Assets_4: -3916058679428922836
+      T_DanceMiniGame_Assets_5: -6068296286387128174
+      T_DanceMiniGame_Assets_6: -4690107177136604182
+      T_DanceMiniGame_Assets_7: -1854732711291521514
+      T_DanceMiniGame_Assets_8: 1057277619157195057
+      T_DanceMiniGame_Assets_9: 7546054623867704630
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
