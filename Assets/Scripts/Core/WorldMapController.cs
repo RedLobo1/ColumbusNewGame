@@ -114,10 +114,11 @@ namespace Julio.Core
         {
             string scene = _lastMinigameScene;
 
-            while (scene == _lastMinigameScene && minigameSceneNames.Count > 1)
-            {
-                scene = minigameSceneNames[Random.Range(0, minigameSceneNames.Count)];
-            }
+            scene = minigameSceneNames[1];
+            // while (scene == _lastMinigameScene && minigameSceneNames.Count > 1)
+            // {
+            //     scene = minigameSceneNames[Random.Range(0, minigameSceneNames.Count)];
+            // }
             
             return scene;
         }

@@ -438,7 +438,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4048034746874744602, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
-      value: 0
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 7797553306704400954, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
       propertyPath: m_Name
@@ -1019,13 +1019,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3adfc7f80eba64047a492f238452fb6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minigameContainer: {fileID: 1828043026}
   gameDuration: 5
+  minigameTargetTexture: {fileID: 8400000, guid: 6bb9f765e3c10e04fbff8292e4d0d1bc, type: 2}
   instructionDuration: 1.5
+  instructionCanvas: {fileID: 592447445}
+  instructionDisplayText: {fileID: 801514309}
   instructionText: Avoid!
   instructionColor: {r: 1, g: 1, b: 1, a: 1}
+  timeProgressBar: {fileID: 240579868}
+  resultDuration: 1.5
   useWinResultState: 0
   useLoseResultState: 0
-  resultDuration: 1.5
   resultCanvas: {fileID: 732918840}
   resultImage: {fileID: 0}
   winSprite: {fileID: 0}
@@ -1034,15 +1039,9 @@ MonoBehaviour:
   gameplayMusic: {fileID: 0}
   winAudio: {fileID: 0}
   loseAudio: {fileID: 0}
-  timeProgressBar: {fileID: 240579868}
-  instructionCanvas: {fileID: 592447445}
-  instructionDisplayText: {fileID: 801514309}
-  minigameContainer: {fileID: 1828043026}
-  instructionSprite: {fileID: 5666552350422210624, guid: 26d7f1758cd35044ea755f4281c4f6cd, type: 3}
-  instructionAnimName: PLACEHOLDER_InstructionImage
+  instructionAnimName: PLACEHOLDER_InstructionText
   backgroundAnimName: PLACEHOLDER_InstructionBackground
   resultAnimName: PLACEHOLDER
-  minigameTargetTexture: {fileID: 8400000, guid: 6bb9f765e3c10e04fbff8292e4d0d1bc, type: 2}
   MinigameCamera: {fileID: 0}
   lanes:
   - -2
@@ -1298,6 +1297,6 @@ SceneRoots:
   - {fileID: 2005726523}
   - {fileID: 1828043027}
   - {fileID: 1702393833}
-  - {fileID: 7018185618934180963}
   - {fileID: 801514308}
   - {fileID: 1279060899}
+  - {fileID: 7018185618934180963}
