@@ -2,15 +2,25 @@ using UnityEngine;
 
 public class OnStartRandomTexture : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] private Sprite[] sprites;
+
+    private SpriteRenderer _spriteRenderer;
+
     void Start()
     {
-        
-    }
+        if (sprites == null || sprites.Length == 0)
+        {
+            Debug.LogWarning("[OnStartRandomTexture] No sprites assigned!", this);
+            return;
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        if (_spriteRenderer == null)
+        {
+            Debug.LogWarning("[OnStartRandomTexture] No SpriteRenderer found on this GameObject!", this);
+            return;
+        }
+
+        _spriteRenderer.sprite = sprites[Random.Range(0, sprites.Length)];
     }
 }

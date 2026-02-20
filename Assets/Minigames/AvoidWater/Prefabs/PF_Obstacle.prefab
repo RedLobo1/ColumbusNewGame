@@ -100,6 +100,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 490ddc1873c207b4fba0f2c7e8cb130d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 7449468132449895193, guid: 785b5ac078193464cac559e8afeeb00b, type: 3}
+  - {fileID: -4271224974481474964, guid: 785b5ac078193464cac559e8afeeb00b, type: 3}
+  - {fileID: -1197870655116264754, guid: 785b5ac078193464cac559e8afeeb00b, type: 3}
+  - {fileID: 8346580937129481579, guid: 785b5ac078193464cac559e8afeeb00b, type: 3}
+  - {fileID: -5532842596244340513, guid: 785b5ac078193464cac559e8afeeb00b, type: 3}
 --- !u!1 &4099721582975233059
 GameObject:
   m_ObjectHideFlags: 0
