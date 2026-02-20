@@ -1287,14 +1287,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1143821300}
-    - target: {fileID: 4048034746874744602, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
-      propertyPath: m_RenderMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4048034746874744602, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
-      propertyPath: m_AdditionalShaderChannelsFlag
-      value: 25
-      objectReference: {fileID: 0}
     - target: {fileID: 7797553306704400954, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
       propertyPath: m_Name
       value: PF_InstructionCanvas

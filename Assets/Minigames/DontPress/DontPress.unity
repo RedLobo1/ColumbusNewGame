@@ -485,9 +485,12 @@ MonoBehaviour:
   instructionColor: {r: 1, g: 1, b: 1, a: 1}
   instructionAnimName: InstructionShow
   timeProgressBar: {fileID: 621999592}
-  resultDuration: 3
+  winDuration: 1.5
   winPrefab: {fileID: 1920216950588123387, guid: 1814e57f18e9fa1468ba7f0f267afb20, type: 3}
+  winPosition: {x: 0, y: 0, z: 0}
+  loseDuration: 2
   losePrefab: {fileID: 1920216950588123387, guid: 1814e57f18e9fa1468ba7f0f267afb20, type: 3}
+  losePosition: {x: 0, y: 0, z: 0}
   instructionMusic: {fileID: 0}
   gameplayMusic: {fileID: 0}
   winAudio: {fileID: 0}
@@ -695,10 +698,6 @@ PrefabInstance:
     - target: {fileID: 7797553306704400954, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
       propertyPath: m_Name
       value: PF_InstructionCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 7797553306704400954, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
