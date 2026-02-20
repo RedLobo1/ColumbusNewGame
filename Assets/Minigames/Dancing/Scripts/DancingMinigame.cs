@@ -79,10 +79,17 @@ namespace Julio.Minigames.Dancing
         private int playerInputIndex = 0;
         private int setsCompleted = 0;
         private bool gameActive = false;
+        
+        private DancingController _controller;
 
         // ──────────────────────────────────────────────────────────────────────────
 
-        void Start()
+        private void Awake()
+        {
+            _controller = Object.FindAnyObjectByType<DancingController>();
+        }
+
+        private void OnEnable()
         {
             StartMinigame();
         }
@@ -279,6 +286,8 @@ namespace Julio.Minigames.Dancing
             confetti2.SetActive(true);
             Debug.Log("Dance Minigame: SUCCESS!");
             // Hook in your own success logic / event here
+            
+            _controller.EndMinigame(true);
         }
 
         private void OnFailure()
@@ -292,6 +301,8 @@ namespace Julio.Minigames.Dancing
             PlaySound(failureSound);
             Debug.Log("Dance Minigame: FAILURE!");
             // Hook in your own failure logic / event here
+            
+            _controller.EndMinigame(false);
         }
     }
 }
