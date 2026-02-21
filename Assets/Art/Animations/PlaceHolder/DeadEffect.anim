@@ -356,7 +356,16 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.6458971
+        value: 0.7660377
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.15
+        value: 0.7283019
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -365,7 +374,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.21666667
-        value: 1
+        value: 0.85660374
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -386,7 +395,16 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.63826185
+        value: 0.70233434
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.15
+        value: 0.7017349
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -395,7 +413,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.21666667
-        value: 1
+        value: 0.7995731
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -416,7 +434,16 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.63826185
+        value: 0.46684936
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.15
+        value: 0.6087504
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -425,7 +452,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.21666667
-        value: 1
+        value: 0.5091135
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1468,7 +1495,16 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.6458971
+        value: 0.7660377
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.15
+        value: 0.7283019
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1477,7 +1513,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.21666667
-        value: 1
+        value: 0.85660374
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1498,7 +1534,16 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.63826185
+        value: 0.70233434
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.15
+        value: 0.7017349
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1507,7 +1552,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.21666667
-        value: 1
+        value: 0.7995731
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1528,7 +1573,16 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.63826185
+        value: 0.46684936
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.15
+        value: 0.6087504
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1537,7 +1591,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.21666667
-        value: 1
+        value: 0.5091135
         inSlope: 0
         outSlope: 0
         tangentMode: 136
