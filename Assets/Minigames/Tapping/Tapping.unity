@@ -7280,9 +7280,11 @@ MonoBehaviour:
   timeProgressBar: {fileID: 1865671906}
   winDuration: 3
   winPrefab: {fileID: 0}
+  winPrefabParent: {fileID: 0}
   winPosition: {x: 0, y: 0, z: 0}
   loseDuration: 2
   losePrefab: {fileID: 7055026024270047274, guid: 4118dc4d82ea3f54a8a3450e931fb1b8, type: 3}
+  losePrefabParent: {fileID: 0}
   losePosition: {x: 0, y: 0, z: 0}
   instructionMusic: {fileID: 0}
   gameplayMusic: {fileID: 0}
@@ -10212,7 +10214,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 25
+  m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 14
@@ -10387,7 +10389,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1168686439}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1168686441
 Camera:
   m_ObjectHideFlags: 0
@@ -11004,7 +11006,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1204588889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11111,7 +11113,7 @@ MonoBehaviour:
   decayRate: 30
   tapIncrease: 4
   runningObjects: {fileID: 1522309428}
-  deadSprite: {fileID: 0}
+  deadSprite: {fileID: 1314296834}
   handleAnim: {fileID: 1951012078}
   decayIncreasePerTwoGames: 5
 --- !u!4 &1209785630
@@ -16098,6 +16100,14 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1755334611144998479, guid: 24b4f9c7ef0fcae44bc20beacc5d676f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1755334611144998479, guid: 24b4f9c7ef0fcae44bc20beacc5d676f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2265005751093286883, guid: 24b4f9c7ef0fcae44bc20beacc5d676f, type: 3}
       propertyPath: m_SizeDelta.x
       value: 1838.1167
@@ -17760,6 +17770,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2369116509957997212, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048034746874744602, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048034746874744602, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7797553306704400954, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}

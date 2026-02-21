@@ -33,10 +33,12 @@ namespace Julio.Core
         [Header("Result Settings")]
         [SerializeField] private float winDuration = 1.5f;
         [SerializeField] private GameObject winPrefab;
+        [SerializeField] private GameObject winPrefabParent;
         [SerializeField] private Vector3 winPosition = Vector3.zero;
         [Space]
         [SerializeField] private float loseDuration = 2.0f;
         [SerializeField] private GameObject losePrefab;
+        [SerializeField] private GameObject losePrefabParent;
         [SerializeField] private Vector3 losePosition = Vector3.zero;
 
         [Header("Audio Settings")]
@@ -205,12 +207,13 @@ namespace Julio.Core
             }
             
             GameObject targetPrefab = wasSuccessful ? winPrefab : losePrefab;
+            GameObject targetPrefabParent = wasSuccessful ? winPrefabParent : losePrefabParent;
             float targetDuration = wasSuccessful ? winDuration : loseDuration;
             Vector3 targetPosition = wasSuccessful ? winPosition : losePosition;
 
             if (targetDuration > 0)
             {
-                StartCoroutine(ResultRoutine(targetPrefab, targetPosition, targetDuration, wasSuccessful));
+                StartCoroutine(ResultRoutine(targetPrefab, targetPrefabParent, targetPosition, targetDuration, wasSuccessful));
             }
             else
             {
@@ -218,11 +221,12 @@ namespace Julio.Core
             }
         }
 
-        private IEnumerator ResultRoutine(GameObject prefab, Vector3 position, float duration, bool wasSuccessful)
+        private IEnumerator ResultRoutine(GameObject prefab, GameObject prefabParent, Vector3 position, float duration, bool wasSuccessful)
         {
             if (prefab != null)
             {
-                Instantiate(prefab, position, Quaternion.identity, gameObject.transform);
+                Transform parent = prefabParent != null ? prefabParent.transform : gameObject.transform;
+                Instantiate(prefab, position, Quaternion.identity, parent);
             }
             
             PlayOptionalMusic(wasSuccessful ? winAudio : loseAudio);

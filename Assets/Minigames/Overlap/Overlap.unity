@@ -1260,9 +1260,11 @@ MonoBehaviour:
   timeProgressBar: {fileID: 1549503231}
   winDuration: 1.5
   winPrefab: {fileID: 6363590219452827602, guid: 45251fb923201d84380c342f3b6c31b7, type: 3}
+  winPrefabParent: {fileID: 0}
   winPosition: {x: 5, y: -1, z: 0}
   loseDuration: 2
   losePrefab: {fileID: 2082260885234899188, guid: a92d5e2869519bc4f95f1f8399bb9e8f, type: 3}
+  losePrefabParent: {fileID: 0}
   losePosition: {x: 0, y: 0, z: 0}
   instructionMusic: {fileID: 0}
   gameplayMusic: {fileID: 0}
@@ -1785,6 +1787,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4048034746874744602, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048034746874744602, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7797553306704400954, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
       propertyPath: m_Name
       value: PF_InstructionCanvas
@@ -2133,7 +2143,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2140736932}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &2140736934
 Camera:
   m_ObjectHideFlags: 0
