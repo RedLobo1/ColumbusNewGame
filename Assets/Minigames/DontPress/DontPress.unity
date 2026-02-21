@@ -987,6 +987,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3980722106117297182, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4048034746874744602, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
       propertyPath: m_RenderMode
       value: 0
@@ -997,7 +1001,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4048034746874744602, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
-      value: 0
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 7797553306704400954, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
       propertyPath: m_Name
@@ -1050,11 +1054,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1755334611144998479, guid: 24b4f9c7ef0fcae44bc20beacc5d676f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 961.3668
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1755334611144998479, guid: 24b4f9c7ef0fcae44bc20beacc5d676f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 79.01613
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2265005751093286883, guid: 24b4f9c7ef0fcae44bc20beacc5d676f, type: 3}
       propertyPath: m_SizeDelta.x

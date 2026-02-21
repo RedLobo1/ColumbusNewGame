@@ -393,6 +393,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Minigame 6_11
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 2184
+        width: 271
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51ebf7a3edd50364d8fe1cf855727237
+      internalID: 232846563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -408,6 +430,7 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       Minigame 6_1: -981190840
+      Minigame 6_11: 232846563
       Minigame 6_2: -810483328
       Minigame 6_3: 27352551
       Minigame 6_4: -1145170461

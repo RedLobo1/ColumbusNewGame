@@ -778,6 +778,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2416355056689398747, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
+      propertyPath: m_text
+      value: 'USE SPACE
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3286034373977243212, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4736480094385632640, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -60
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228955524321953552, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7797553306704400954, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
       propertyPath: m_Name
       value: PF_InstructionCanvas
@@ -1408,9 +1426,11 @@ MonoBehaviour:
   timeProgressBar: {fileID: 700584583}
   winDuration: 1.5
   winPrefab: {fileID: 6363590219452827602, guid: eb4b2874acd16cd499838b5e4a2e27e2, type: 3}
+  winPrefabParent: {fileID: 0}
   winPosition: {x: 6.74, y: 0, z: 0}
   loseDuration: 2
   losePrefab: {fileID: 1920216950588123387, guid: 1814e57f18e9fa1468ba7f0f267afb20, type: 3}
+  losePrefabParent: {fileID: 0}
   losePosition: {x: 0, y: 0, z: 0}
   instructionMusic: {fileID: 0}
   gameplayMusic: {fileID: 0}
