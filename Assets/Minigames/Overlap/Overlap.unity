@@ -1057,7 +1057,7 @@ MonoBehaviour:
   interpolationDuration: 2
   pingPong: 1
   player: {fileID: 297178508}
-  playerMoveSpeed: 5.03
+  playerMoveSpeed: 8
   playerMinX: -5
   playerMaxX: 5
   idleObject: {fileID: 871354544}
@@ -1259,8 +1259,8 @@ MonoBehaviour:
   instructionAnimName: InstructionShow
   timeProgressBar: {fileID: 1549503231}
   winDuration: 1.5
-  winPrefab: {fileID: 6363590219452827602, guid: eb4b2874acd16cd499838b5e4a2e27e2, type: 3}
-  winPosition: {x: 0, y: 0, z: 0}
+  winPrefab: {fileID: 6363590219452827602, guid: 45251fb923201d84380c342f3b6c31b7, type: 3}
+  winPosition: {x: 5, y: -1, z: 0}
   loseDuration: 2
   losePrefab: {fileID: 2082260885234899188, guid: a92d5e2869519bc4f95f1f8399bb9e8f, type: 3}
   losePosition: {x: 0, y: 0, z: 0}
