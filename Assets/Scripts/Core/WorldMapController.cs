@@ -118,6 +118,7 @@ namespace Julio.Core
             }
             
             Debug.Log("Journey Finished!");
+            GameManager.Instance.GoToWinScene();
         }
         
         // Called by GameManager via some signal (or you can pass result to UnloadMinigame)

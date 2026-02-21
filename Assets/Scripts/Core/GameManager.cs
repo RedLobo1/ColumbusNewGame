@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Julio.Core
 {
@@ -65,7 +66,8 @@ namespace Julio.Core
                 if (_currentLives <= 0)
                 {
                     Debug.Log("Game Over!");
-                    // To-do: Trigger Game Over Screen
+                    Invoke(nameof(GoToLoseScene), 1.0f);
+                    return;
                 }
             }
             
@@ -83,6 +85,17 @@ namespace Julio.Core
             {
                 map.SetMinigameFrameVisibility(show);
             }
+        }
+        
+        public void GoToWinScene() => SceneManager.LoadScene("Win");
+        public void GoToLoseScene() => SceneManager.LoadScene("Lose");
+        
+        public void ResetGame()
+        {
+            _currentLives = maxLives;
+            successfulGames = 0;
+            globalSpeedMultiplier = 1f;
+            SceneManager.LoadScene("Main");
         }
     }
 }
