@@ -31,7 +31,8 @@ namespace Julio.Core
         [Header("Minigame Settings")]
         [SerializeField] private List<string> minigameSceneNames;
         [SerializeField] private string finalMinigameScene; // The fixed 10th game
-        
+        [SerializeField] private Animator transitionAnimator; // Optional: for fade in/out or other transitions
+
         [Header("Blur Settings")]
         [SerializeField] private GameObject blurCamera;
         [SerializeField] private GameObject blurOverlay;
@@ -107,11 +108,13 @@ namespace Julio.Core
                 
                 _lastMinigameScene = sceneToLoad;
                 yield return StartCoroutine(LoadMinigameAdditive(sceneToLoad));
+                transitionAnimator.Play("OnMinigameStart");
 
                 // 4. Wait for end (GameManager triggers UnloadMinigame which clears _currentLoadedScene)
                 yield return new WaitUntil(() => _currentLoadedScene == null);
-                
+
                 // 5. Short pause to see the result on the map
+                transitionAnimator.Play("OnMinigameEnd");
                 yield return new WaitForSeconds(waitAfterMinigame);
                 
                 if (_totalGamesPlayed == 10) break; // End of journey
