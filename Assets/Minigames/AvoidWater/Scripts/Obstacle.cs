@@ -35,6 +35,11 @@ namespace Julio.Minigames.AvoidWater
 
         void Update()
         {
+            if (_controller == null || !_controller.IsActive) 
+            {
+                return; 
+            }  
+            
             float currentSpeed = baseSpeed;
 
             if (GameManager.Instance != null)
