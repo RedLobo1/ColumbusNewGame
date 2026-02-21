@@ -1483,11 +1483,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minigameContainer: {fileID: 1597766947}
-  gameDuration: 12
+  gameDuration: 16
   keepContainerActiveOnEnd: 1
   minigameTargetTexture: {fileID: 8400000, guid: 6bb9f765e3c10e04fbff8292e4d0d1bc, type: 2}
   MinigameCamera: {fileID: 0}
-  instructionDuration: 1.5
+  instructionDuration: 1
   instructionCanvas: {fileID: 2116140020}
   instructionDisplayText: {fileID: 2116140021}
   instructionText: Dance!
