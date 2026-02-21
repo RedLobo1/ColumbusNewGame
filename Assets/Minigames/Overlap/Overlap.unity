@@ -1252,7 +1252,7 @@ MonoBehaviour:
   keepContainerActiveOnEnd: 1
   minigameTargetTexture: {fileID: 8400000, guid: 6bb9f765e3c10e04fbff8292e4d0d1bc, type: 2}
   MinigameCamera: {fileID: 0}
-  instructionDuration: 1.5
+  instructionDuration: 3
   instructionCanvas: {fileID: 1887827383}
   instructionDisplayText: {fileID: 1887827384}
   instructionText: Don't make a mess!
@@ -1797,7 +1797,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4736480094385632640, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -62.9
+      value: -57.3
       objectReference: {fileID: 0}
     - target: {fileID: 5917620697107544242, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
       propertyPath: m_Enabled
