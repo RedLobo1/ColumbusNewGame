@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Main.unity
+    guid: 4212ecc549830a04a9fd8f3d38e4591f
+  - enabled: 1
     path: Assets/Scenes/Map.unity
     guid: 92305bb80f9420349b320ff31163f49a
   - enabled: 1
@@ -26,6 +29,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Minigames/Overlap/Overlap.unity
     guid: e9cac3262913e354d85045f1868c919b
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: 266a1585797ef094c9f3532590ec7769
+  - enabled: 1
+    path: Assets/Scenes/Lose.unity
+    guid: cb542e3bc3460ec4c80051484ed8e29d
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: cc1d359512e0ae34dba027bce8a40b18
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
