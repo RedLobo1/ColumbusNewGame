@@ -3408,7 +3408,7 @@ MonoBehaviour:
   winDuration: 2
   winPrefab: {fileID: 6363590219452827602, guid: eb4b2874acd16cd499838b5e4a2e27e2, type: 3}
   winPrefabParent: {fileID: 0}
-  winPosition: {x: 8, y: 0, z: 0}
+  winPosition: {x: 7, y: -4, z: 0}
   loseDuration: 2
   losePrefab: {fileID: 0}
   losePrefabParent: {fileID: 0}
