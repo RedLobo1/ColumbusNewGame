@@ -117,6 +117,12 @@ namespace Julio.Core
                 transitionAnimator.Play("OnMinigameEnd");
                 yield return new WaitForSeconds(waitAfterMinigame);
                 
+                if (GameManager.Instance != null && GameManager.Instance.IsGameOver)
+                {
+                    GameManager.Instance.GoToLoseScene();
+                    yield break;
+                }
+                
                 if (_totalGamesPlayed == 10) break; // End of journey
             }
             

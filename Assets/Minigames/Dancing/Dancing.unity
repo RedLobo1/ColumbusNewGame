@@ -1495,9 +1495,11 @@ MonoBehaviour:
   timeProgressBar: {fileID: 467914926}
   winDuration: 1.5
   winPrefab: {fileID: 6363590219452827602, guid: eb4b2874acd16cd499838b5e4a2e27e2, type: 3}
+  winPrefabParent: {fileID: 0}
   winPosition: {x: 0, y: 0, z: 0}
   loseDuration: 2
   losePrefab: {fileID: 1920216950588123387, guid: 1814e57f18e9fa1468ba7f0f267afb20, type: 3}
+  losePrefabParent: {fileID: 0}
   losePosition: {x: 0, y: 0, z: 0}
   instructionMusic: {fileID: 0}
   gameplayMusic: {fileID: 0}
@@ -2153,7 +2155,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1042621281}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1042621283
 Camera:
   m_ObjectHideFlags: 0
@@ -2717,7 +2719,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1135966986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4456,6 +4458,14 @@ PrefabInstance:
     - target: {fileID: 3266801894179163360, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4278190080
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048034746874744602, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048034746874744602, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7797553306704400954, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
       propertyPath: m_Name

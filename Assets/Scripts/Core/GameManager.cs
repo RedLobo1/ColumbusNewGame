@@ -19,6 +19,7 @@ namespace Julio.Core
         public float globalSpeedMultiplier = 1f;
         
         public int CurrentLives => _currentLives;
+        public bool IsGameOver => _currentLives <= 0;
 
         public bool lastGameWon;
 
@@ -42,9 +43,6 @@ namespace Julio.Core
         /// <param name="won">Whether the minigame was successful.</param>
         public void OnMinigameEnd(bool won)
         {
-            WorldMapController map = Object.FindAnyObjectByType<WorldMapController>();
-            if (map != null) map.RegisterResult(won);
-            
             if (won)
             {
                 successfulGames++;
@@ -54,27 +52,15 @@ namespace Julio.Core
             else
             {
                 _currentLives--; 
-                
-                // Update UI on the map immediately
-                if (map != null)
-                {
-                    map.UpdateHeartsUI(_currentLives);
-                }
-
                 lastGameWon=false;
-
-                if (_currentLives <= 0)
-                {
-                    Debug.Log("Game Over!");
-                    Invoke(nameof(GoToLoseScene), 1.0f);
-                    return;
-                }
             }
             
-            WorldMapController controller = Object.FindAnyObjectByType<WorldMapController>();
-            if (controller != null)
+            WorldMapController mapController = Object.FindAnyObjectByType<WorldMapController>();
+            if (mapController != null)
             {
-                controller.UnloadMinigame();
+                mapController.RegisterResult(won);
+                mapController.UnloadMinigame();
+                mapController.UpdateHeartsUI(_currentLives);
             }
         }
         
@@ -95,7 +81,7 @@ namespace Julio.Core
             _currentLives = maxLives;
             successfulGames = 0;
             globalSpeedMultiplier = 1f;
-            SceneManager.LoadScene("Main");
+            lastGameWon = false;
         }
     }
 }
