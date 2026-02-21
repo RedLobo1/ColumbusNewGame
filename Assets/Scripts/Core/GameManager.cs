@@ -18,7 +18,12 @@ namespace Julio.Core
         [Header("Difficulty")]
         public float globalSpeedMultiplier = 1f;
         
-        public int CurrentLives => _currentLives;
+        public int CurrentLives
+        {
+            get => _currentLives;
+            set => _currentLives = value;
+        }
+
         public bool IsGameOver => _currentLives <= 0;
 
         public bool lastGameWon;
