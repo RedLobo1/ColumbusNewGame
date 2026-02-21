@@ -41,6 +41,9 @@ namespace Julio.Core
         /// <param name="won">Whether the minigame was successful.</param>
         public void OnMinigameEnd(bool won)
         {
+            WorldMapController map = Object.FindAnyObjectByType<WorldMapController>();
+            if (map != null) map.RegisterResult(won);
+            
             if (won)
             {
                 successfulGames++;
@@ -50,9 +53,12 @@ namespace Julio.Core
             else
             {
                 _currentLives--; 
+                
                 // Update UI on the map immediately
-                WorldMapController map = Object.FindAnyObjectByType<WorldMapController>();
-                if (map != null) map.UpdateHeartsUI(_currentLives);
+                if (map != null)
+                {
+                    map.UpdateHeartsUI(_currentLives);
+                }
 
                 lastGameWon=false;
 

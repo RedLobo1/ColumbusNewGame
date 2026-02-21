@@ -11,6 +11,10 @@ namespace Julio.Core
     /// </summary>
     public class WorldMapController : MonoBehaviour
     {
+        [Header("Navigation Settings")]
+        [SerializeField] private List<MapNode> allNodes; // Put 10 nodes here (0-8 random, 9 is Boss/Final)
+        [SerializeField] private Transform startingPoint; // Ship starting position
+        
         [Header("Movement Settings")] 
         [SerializeField] private Transform shipTransform;
         [SerializeField] private GameObject shipVisual;   
@@ -26,6 +30,7 @@ namespace Julio.Core
 
         [Header("Minigame Settings")]
         [SerializeField] private List<string> minigameSceneNames;
+        [SerializeField] private string finalMinigameScene; // The fixed 10th game
         
         [Header("Blur Settings")]
         [SerializeField] private GameObject blurCamera;
@@ -41,8 +46,12 @@ namespace Julio.Core
         [SerializeField] private Canvas minigameFrameCanvas;
 
         private int _lastNodeIndex = -1;
+        private List<MapNode> _visitedNodes = new List<MapNode>();
+        private MapNode _currentNode;
         private string _lastMinigameScene;
         private string _currentLoadedScene;
+        private int _totalGamesPlayed = 0;
+        
         private Coroutine _blurCoroutine;
 
         [SerializeField] UnityEvent onMinigameLoad;
@@ -55,18 +64,75 @@ namespace Julio.Core
 
         private void Start()
         {
-            if (nodePoints.Count > 0)
+            if (startingPoint != null)
             {
-                shipTransform.position = nodePoints[0].position;
-                _lastNodeIndex = 0;
-            } 
+                shipTransform.position = startingPoint.position;
+            }
             
             if (GameManager.Instance != null)
             {
                 UpdateHeartsUI(GameManager.Instance.CurrentLives);
             }
+            StartCoroutine(LinearMapRoutine());
+        }
+        
+        private IEnumerator LinearMapRoutine()
+        {
+            while (_totalGamesPlayed < 10)
+            {
+                _totalGamesPlayed++;
+                MapNode nextNode;
+
+                // 1. Determine next node
+                if (_totalGamesPlayed == 10)
+                {
+                    nextNode = allNodes[9]; // Always the fixed 10th node
+                }
+                else
+                {
+                    nextNode = GetRandomUnvisitedNode();
+                }
+
+                _currentNode = nextNode;
+                _visitedNodes.Add(nextNode);
+
+                // 2. Move Ship
+                yield return StartCoroutine(MoveShipRoutine(nextNode.transform.position));
+                yield return new WaitForSeconds(waitAfterArrival);
+
+                // 3. Load Minigame
+                string sceneToLoad = (_totalGamesPlayed == 10) 
+                    ? finalMinigameScene 
+                    : GetRandomMinigameScene();
+                
+                _lastMinigameScene = sceneToLoad;
+                yield return StartCoroutine(LoadMinigameAdditive(sceneToLoad));
+
+                // 4. Wait for end (GameManager triggers UnloadMinigame which clears _currentLoadedScene)
+                yield return new WaitUntil(() => _currentLoadedScene == null);
+                
+                // 5. Short pause to see the result on the map
+                yield return new WaitForSeconds(waitAfterMinigame);
+                
+                if (_totalGamesPlayed == 10) break; // End of journey
+            }
             
-            StartCoroutine(MapLoopRoutine());
+            Debug.Log("Journey Finished!");
+        }
+        
+        // Called by GameManager via some signal (or you can pass result to UnloadMinigame)
+        public void RegisterResult(bool won)
+        {
+            if (_currentNode != null)
+            {
+                _currentNode.SetResult(won);
+            }
+        }
+        
+        private MapNode GetRandomUnvisitedNode()
+        {
+            List<MapNode> available = allNodes.GetRange(0, 9).FindAll(n => !n.IsVisited);
+            return available[Random.Range(0, available.Count)];
         }
         
         private IEnumerator MapLoopRoutine()
