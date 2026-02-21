@@ -7268,7 +7268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minigameContainer: {fileID: 1152438695}
-  gameDuration: 5
+  gameDuration: 6
   keepContainerActiveOnEnd: 1
   minigameTargetTexture: {fileID: 8400000, guid: 6bb9f765e3c10e04fbff8292e4d0d1bc, type: 2}
   MinigameCamera: {fileID: 0}
@@ -7282,7 +7282,7 @@ MonoBehaviour:
   winPrefab: {fileID: 0}
   winPrefabParent: {fileID: 0}
   winPosition: {x: 0, y: 0, z: 0}
-  loseDuration: 0.5
+  loseDuration: 1.5
   losePrefab: {fileID: 7055026024270047274, guid: 4118dc4d82ea3f54a8a3450e931fb1b8, type: 3}
   losePrefabParent: {fileID: 0}
   losePosition: {x: 0, y: 0, z: 0}
@@ -11110,12 +11110,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 2069919291}
-  decayRate: 30
-  tapIncrease: 4
+  decayRate: 25
+  tapIncrease: 5
   runningObjects: {fileID: 1522309428}
   deadSprite: {fileID: 1314296834}
   handleAnim: {fileID: 1951012078}
-  decayIncreasePerTwoGames: 5
+  decayIncreasePerTwoGames: 4
 --- !u!4 &1209785630
 Transform:
   m_ObjectHideFlags: 0
@@ -17771,6 +17771,10 @@ PrefabInstance:
     - target: {fileID: 2369116509957997212, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4736480094385632640, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -20.8
       objectReference: {fileID: 0}
     - target: {fileID: 7797553306704400954, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
       propertyPath: m_Name
