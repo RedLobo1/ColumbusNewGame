@@ -5,15 +5,15 @@ namespace Julio.Minigames.StopAtRightTime
 {
     public class StopAtRightTimeMinigame : MonoBehaviour
     {
-        [Header("Interpolated Item")] [SerializeField]
-        private StopAtRightTimeItem interpolatedItem;
-
+        [Header("Interpolated Item")]
+        [SerializeField] private StopAtRightTimeItem interpolatedItem;
         [SerializeField] private Transform pointA;
         [SerializeField] private Transform pointB;
         [SerializeField] private float interpolationDuration = 2f;
         [SerializeField] private bool pingPong = true;
 
-        [Header("Timer")] [SerializeField] private float timerDuration = 5f;
+        [Header("Timer")]
+        [SerializeField] private float timerDuration = 5f;
 
         // Result
         public bool hasSucceeded { get; private set; } = false;
@@ -23,7 +23,7 @@ namespace Julio.Minigames.StopAtRightTime
         private float timer;
         private bool isRunning = false;
         private bool isStopped = false;
-        
+
         private StopAtRightTimeController _controller;
 
         [Header("Audio")]
@@ -32,21 +32,52 @@ namespace Julio.Minigames.StopAtRightTime
         [SerializeField] private AudioClip successClip;
         [SerializeField] private AudioClip failClip;
 
-        
-        private void OnEnable()
-        {
-            StartMinigame();
-        }
-
         [Header("Difficulty")]
         [SerializeField] private float speedIncreasePerTwoGames = 0.2f;
-
         private float _baseInterpolationDuration;
+
+        [Header("Characters")]
+        [SerializeField] private SpriteRenderer char1SpriteRenderer;
+        [SerializeField] private SpriteRenderer char2SpriteRenderer;
+        [SerializeField] private SpriteRenderer char3SpriteRenderer;
+
+        [SerializeField] private Sprite char1IdleSprite;
+        [SerializeField] private Sprite char2IdleSprite;
+        [SerializeField] private Sprite char3IdleSprite;
+
+        [SerializeField] private Sprite char1FailSprite;
+        [SerializeField] private Sprite char2FailSprite;
+        [SerializeField] private Sprite char3FailSprite;
+
+        [Header("Animator")]
+        [SerializeField] private Animator flagAnimator;
+        private static readonly int IdleHash = Animator.StringToHash("Idle");
+        private static readonly int PutDownHash = Animator.StringToHash("PutDown");
 
         private void Awake()
         {
             _controller = Object.FindAnyObjectByType<StopAtRightTimeController>();
             _baseInterpolationDuration = interpolationDuration;
+        }
+
+        private void OnEnable()
+        {
+            InitCharacters();
+            StartMinigame();
+        }
+
+        private void InitCharacters()
+        {
+            char1SpriteRenderer.sprite = char1IdleSprite;
+            char2SpriteRenderer.sprite = char2IdleSprite;
+            char3SpriteRenderer.sprite = char3IdleSprite;
+        }
+
+        private void ActivateFailSprites()
+        {
+            char1SpriteRenderer.sprite = char1FailSprite;
+            char2SpriteRenderer.sprite = char2FailSprite;
+            char3SpriteRenderer.sprite = char3FailSprite;
         }
 
         public void StartMinigame()
@@ -59,9 +90,9 @@ namespace Julio.Minigames.StopAtRightTime
 
             interpolationDuration = _baseInterpolationDuration / (1 + (GameManager.Instance.successfulGames / 2) * speedIncreasePerTwoGames);
 
+            flagAnimator?.Play("Idle");
             PlayClip(themeClip);
         }
-
 
         private void Update()
         {
@@ -111,14 +142,20 @@ namespace Julio.Minigames.StopAtRightTime
             if (interpolatedItem != null)
                 interpolatedItem.PlayStopAnimation();
 
+            flagAnimator?.Play("PutDown");
             CheckOverlap();
         }
 
         private void CheckOverlap()
         {
             if (interpolatedItem == null) return;
+
             hasSucceeded = interpolatedItem.isOverlapping;
             Debug.Log($"[StopMinigame] Result: {(hasSucceeded ? "SUCCESS" : "FAIL")}");
+
+            if (!hasSucceeded)
+                ActivateFailSprites();
+
             PlayClip(hasSucceeded ? successClip : failClip);
             _controller.EndMinigame(hasSucceeded);
         }
@@ -130,7 +167,6 @@ namespace Julio.Minigames.StopAtRightTime
             audioSource.clip = clip;
             audioSource.Play();
         }
-
 
         private void OnDrawGizmosSelected()
         {

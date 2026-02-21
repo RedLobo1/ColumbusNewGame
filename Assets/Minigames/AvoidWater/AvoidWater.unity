@@ -1581,7 +1581,47 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4048034746874744602, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
-      value: 0
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866819435533929544, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7028686
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866819435533929544, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866819435533929544, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866819435533929544, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.71131974
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866819435533929544, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90.685
+      objectReference: {fileID: 0}
+    - target: {fileID: 7709915717572188958, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7119915
+      objectReference: {fileID: 0}
+    - target: {fileID: 7709915717572188958, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7709915717572188958, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7709915717572188958, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.70218813
+      objectReference: {fileID: 0}
+    - target: {fileID: 7709915717572188958, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -89.206
       objectReference: {fileID: 0}
     - target: {fileID: 7797553306704400954, guid: d1589925a925d1e44ac7cc30771acd73, type: 3}
       propertyPath: m_Name
@@ -3355,7 +3395,7 @@ MonoBehaviour:
   keepContainerActiveOnEnd: 1
   minigameTargetTexture: {fileID: 8400000, guid: 6bb9f765e3c10e04fbff8292e4d0d1bc, type: 2}
   MinigameCamera: {fileID: 0}
-  instructionDuration: 1.5
+  instructionDuration: 3
   instructionCanvas: {fileID: 592447445}
   instructionDisplayText: {fileID: 801514309}
   instructionText: Avoid!
@@ -3364,7 +3404,7 @@ MonoBehaviour:
   winDuration: 2
   winPrefab: {fileID: 6363590219452827602, guid: eb4b2874acd16cd499838b5e4a2e27e2, type: 3}
   winPrefabParent: {fileID: 0}
-  winPosition: {x: 0, y: 0, z: 0}
+  winPosition: {x: 8, y: 0, z: 0}
   loseDuration: 2
   losePrefab: {fileID: 0}
   losePrefabParent: {fileID: 0}

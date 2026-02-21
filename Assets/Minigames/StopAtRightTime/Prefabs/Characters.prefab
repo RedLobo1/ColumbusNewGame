@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1580431395367587533}
   - component: {fileID: 1141672817181857703}
   m_Layer: 0
-  m_Name: Char
+  m_Name: Char3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_Size: {x: 6.550677, y: 6.5099998}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2152842831535026270
@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 4240862331730277867}
   - component: {fileID: 5087370556852426460}
   m_Layer: 0
-  m_Name: Char
+  m_Name: Char1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -262,7 +262,7 @@ SpriteRenderer:
   m_Size: {x: 0.7700796, y: 0.71}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1977868620873745527
@@ -368,7 +368,7 @@ SpriteRenderer:
   m_Size: {x: 0.7700796, y: 0.71}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &3909285610603530776
@@ -474,7 +474,7 @@ SpriteRenderer:
   m_Size: {x: 0.7700796, y: 0.71}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1415422886635977158
@@ -580,7 +580,7 @@ SpriteRenderer:
   m_Size: {x: 0.7700796, y: 0.71}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1951216204690348158
@@ -612,7 +612,7 @@ GameObject:
   - component: {fileID: 8669615935221306375}
   - component: {fileID: 3533107711228536575}
   m_Layer: 0
-  m_Name: Char
+  m_Name: Char2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -720,8 +720,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4240862331730277867}
-  - {fileID: 1580431395367587533}
   - {fileID: 8669615935221306375}
+  - {fileID: 1580431395367587533}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9051058343619865731
@@ -809,7 +809,7 @@ SpriteRenderer:
   m_Size: {x: 0.7700796, y: 0.71}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &7249460471909481739
