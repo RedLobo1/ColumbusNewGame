@@ -79,7 +79,7 @@ namespace Julio.Minigames.AvoidWater
                 // Lane 1 (middle) -> Order 2
                 // Lane 2 (top)    -> Order 1
                 _spriteRenderer.sortingOrder = baseSortingOrder + (_controller.lanes.Length - 1 - _currentLane);
-                move.Play();
+                if(!move.isPlaying)move.Play();
             }
         }
 

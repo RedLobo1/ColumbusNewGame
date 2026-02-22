@@ -18,7 +18,6 @@ namespace Julio.Minigames.AvoidWater
         
         [SerializeField] private Animator animator;
         [SerializeField] private AudioSource drown;
-        [SerializeField] private AudioSource move;
 
 
         protected override void OnLose()
