@@ -189,6 +189,7 @@ MonoBehaviour:
   - {fileID: 801779563}
   - {fileID: 801779562}
   minigameFrameCanvas: {fileID: 1421527735}
+  minigameFrameCanvasObject: {fileID: 1421527732}
   onMinigameLoad:
     m_PersistentCalls:
       m_Calls:
@@ -2095,7 +2096,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1421527733
 MonoBehaviour:
   m_ObjectHideFlags: 0
