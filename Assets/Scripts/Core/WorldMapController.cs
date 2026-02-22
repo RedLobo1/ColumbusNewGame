@@ -45,6 +45,7 @@ namespace Julio.Core
         
         [Header("UI - Render Texture")]
         [SerializeField] private Canvas minigameFrameCanvas;
+        [SerializeField] private GameObject minigameFrameCanvasObject;
 
         private int _lastNodeIndex = -1;
         private List<MapNode> _visitedNodes = new List<MapNode>();
@@ -196,6 +197,7 @@ namespace Julio.Core
             if (blurOverlay != null) blurOverlay.SetActive(true);
             if (shipVisual != null) shipVisual.SetActive(false);
 
+            minigameFrameCanvasObject.SetActive(true);
             AsyncOperation loadOp = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
             while (!loadOp.isDone) yield return null;
             
@@ -237,7 +239,8 @@ namespace Julio.Core
             if (blurCamera != null) blurCamera.SetActive(false);
             onMinigameUnload?.Invoke();
 
-
+            minigameFrameCanvasObject.SetActive(false);
+            
             // Play audio whether won or lost
             if(GameManager.Instance.lastGameWon)
             { minigameWon.Play(); }
