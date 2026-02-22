@@ -3405,11 +3405,11 @@ MonoBehaviour:
   instructionText: Avoid!
   instructionAnimName: PLACEHOLDER_InstructionText
   timeProgressBar: {fileID: 240579868}
-  winDuration: 2
+  winDuration: 4.75
   winPrefab: {fileID: 6363590219452827602, guid: eb4b2874acd16cd499838b5e4a2e27e2, type: 3}
   winPrefabParent: {fileID: 0}
   winPosition: {x: 7, y: -4, z: 0}
-  loseDuration: 2
+  loseDuration: 3
   losePrefab: {fileID: 0}
   losePrefabParent: {fileID: 0}
   losePosition: {x: 0, y: 0, z: 0}
@@ -3423,7 +3423,6 @@ MonoBehaviour:
   - 2
   animator: {fileID: 746120339}
   drown: {fileID: 130333238}
-  move: {fileID: 0}
 --- !u!4 &2005726523
 Transform:
   m_ObjectHideFlags: 0
